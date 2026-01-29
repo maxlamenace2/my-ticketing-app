@@ -18,18 +18,65 @@
                 <ul>
                     <li><a href="projects-list.html">Projects</a></li>
                     <li><a href="tickets-list.html">Tickets</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="ticket-create.html">Create ticket</a></li>
+                    <li><a href="dashboard.html" class="active">dashboard</a></li>
                     <li><a href="../index.html">Logout</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <div class = "dashboard-main">
-            <div class="dashboard-info-générale">
-                <h2>info général</h2>
-            </div>
-    </div>
+    <main class = "dashboard-main">
+
+            <section class="dashboard-info-left">
+                <h2 class = "dashboard-info-left-title">information général</h2>
+                <div class = "dashboard-info-left-boxes">
+                    <h3 class = "dashboard-info-left-boxes-title">Ticket Past Due</h3>
+                    <div class = "dashboard-info-left-boxes-stats">
+                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
+                        <h3 class = "dashboard-info-left-boxes-stats-number">5</h3>
+                    </div>
+                </div>
+                <div class = "dashboard-info-left-boxes">
+                    <h3 class = "dashboard-info-left-boxes-title">New Tickets Today</h3>
+                    <div class = "dashboard-info-left-boxes-stats">
+                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
+                        <h3 class = "dashboard-info-left-boxes-stats-number">45</h3>
+                    </div>
+                </div>
+                <div class = "dashboard-info-left-boxes">
+                    <h3 class = "dashboard-info-left-boxes-title">Tickets Closed Today</h3>
+                    <div class = "dashboard-info-left-boxes-stats">
+                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
+                        <h3 class = "dashboard-info-left-boxes-stats-number">22</h3>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="dashboard-info-center">
+                <div class="dashboard-info-center-boxes">
+                    <h2>Ticket Payant</h2>
+                </div>
+                <div class="dashboard-info-center-boxes">
+                    <h2>Ticket gratuit</h2>
+                </div>
+
+            </section>
+
+
+
+
+            <section class="dashboard-info-right">
+                <div class = "dashboard-info-right-boxes">
+                    <h2 class = "dashboard-info-right-title-up"> Ticket Recent </h2> 
+                </div>
+                <div class = "dashboard-info-right-boxes">
+                    <h2 class = "dashboard-info-right-title-down"> Liste des clients </h2> 
+                </div>
+            </section>
+        </main>
 
     
         
