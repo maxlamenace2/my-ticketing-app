@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/ticket-create.css">
     <title>ticket create</title>
 </head>
 <body class = "dashboard-page">
@@ -27,10 +28,32 @@
     </header>
 
     
-    <main>
-        
+    <main class="ticket">
+        <section class = "ticket-create-section">
+            <h1>Create a new Ticket</h1>
+            <form class = "ticket-create-form">
+                <div class="form-id">
+                    <label for="project-id">ID</label>
+                    <input type="text" id="project-id" name="project-id" required>
+                </div>
+                <div class="form-name">
+                    <label for="project-name">Title</label>
+                    <input type="text" id="project-name" name="project-name" required>
+                </div>
+                <div class="form-details">
+                    <label for="project-details">Project Details:</label>
+                    <textarea id="project-details" name="project-details" required></textarea>
+                </div>
+                <div class=""form-collaborators">
+                    <label for="collaborators">Collaborators (comma separated):</label>
+                    <input type="text" id="collaborators" name="collaborators">
+                </div>
+                <div class = "form-btn"></div>
+                    <button type="submit">Create Project</button>
+                </div>
+            </form>
+        </section>
     </main>
-
     
         
 

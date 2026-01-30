@@ -3,70 +3,110 @@
    ========================================= */
 
 /* Section info du projet */
+/* Section info du projet */
 .my-project-info {
-    background: white;
-    border-radius: 12px;
-    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
     margin: 30px auto;
     max-width: 1200px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
+    gap: 40px;
+    color: #2d3436;
+}
+
+/* Conteneurs de colonnes */
+.my-project-info-container-1, 
+.my-project-info-container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: none; /* Suppression de la bordure rouge */
 }
 
 .my-project-info-container-1 {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-
-
-    border: 1px solid #991919;
+    flex: 2;
 }
 
-.my-project-info-container-2{
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-bottom: 30px;
-
-    border: 1px solid #991919;
+.my-project-info-container-2 {
+    flex: 1;
+    align-items: flex-end; /* Aligne le temps et les boutons à droite */
+    text-align: right;
 }
 
-.my-project-info-container-1-id, .my-project-info-container-1-name{
+/* Groupes de données (ID, Nom, etc.) */
+.my-project-info-container-1 > div, 
+.my-project-info-container-2-hours {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
+    align-items: baseline;
+    gap: 12px;
 }
 
-
-.my-project-info-container-2-contract {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+/* Typographie */
+.my-project-info h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #636e72; /* Gris élégant pour les labels */
 }
 
+/* Valeurs spécifiques (ID, Nom du projet) */
+.my-project-info-container-1-id h1:nth-child(2),
+.my-project-info-container-1-name h1:nth-child(2),
+.my-project-info-container-2-hours h1:nth-child(2) {
+    color: #2d3436;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
 
+/* Texte de description */
+.my-project-info p {
+    margin: 0;
+    color: #4b6584;
+}
 
+/* Boutons EDIT (discrets) */
+btn {
+    margin-left: auto;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #3498db;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f1f7ff;
+    transition: background 0.2s;
+}
+
+btn:hover {
+    background: #d6eaff;
+}
 
 /* Collaborateurs badges */
 .cololaborators-list {
     display: inline-block;
-    background: #e8f4f8;
-    color: #3498db;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-right: 8px;
-    margin-top: 8px;
-    font-size: 13px;
+    background: #f0f2f5;
+    color: #4b6584;
+    padding: 5px 15px;
+    border-radius: 30px;
+    margin-right: 5px;
+    font-size: 0.9rem;
     font-weight: 500;
+    border: 1px solid #e1e4e8;
+}
+
+/* Conteneur boutons de contrat */
+.my-project-info-container-2-contract {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
 }
 
 /* Boutons de contrat */
@@ -74,20 +114,24 @@
     background: #3498db;
     color: white;
     border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
+    padding: 14px 28px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    margin-right: 10px;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+    min-width: 200px;
 }
 
-.my-project-info button:hover {
+.my-project-info-button:hover {
     background: #2980b9;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.my-project-info-button:active {
+    transform: translateY(0);
 }
 
 

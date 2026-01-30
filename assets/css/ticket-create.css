@@ -1,5 +1,5 @@
 /* Main container */
-.project-create-main {
+.ticket-create-main {
     padding: 60px 20px;
     background-color: #f4f7fa; /* Gris très clair pour faire ressortir la carte */
     min-height: calc(100vh - 80px);
@@ -10,7 +10,7 @@
 }
 
 /* La carte du formulaire */
-.project-create-section {
+.ticket-create-section {
     background-color: white;
     padding: 40px;
     border-radius: 16px;
@@ -20,7 +20,7 @@
     margin: 0 auto;
 }
 
-.project-create-section h1 {
+.ticket-create-section h1 {
     color: #1e293b;
     font-size: 24px;
     font-weight: 700;
@@ -29,14 +29,14 @@
 }
 
 /* Structure du formulaire */
-.project-create-form {
+.ticket-create-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /* Groupes d'inputs */
-.project-create-form > div {
+.ticket-create-form > div {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -75,7 +75,7 @@ textarea {
 }
 
 /* Bouton de soumission */
-.project-create-form button[type="submit"] {
+.ticket-create-form button[type="submit"] {
     margin-top: 10px;
     background: #3498db;
     color: white;
@@ -88,12 +88,12 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.project-create-form button[type="submit"]:hover {
+.ticket-create-form button[type="submit"]:hover {
     background: #2980b9;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
-.project-create-form button[type="submit"]:active {
+.ticket-create-form button[type="submit"]:active {
     transform: translateY(0);
 }
