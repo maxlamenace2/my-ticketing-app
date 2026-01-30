@@ -243,6 +243,11 @@ body {
     flex-direction: column;
 }
 
+.dashboard-info-left:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
 .dashboard-info-center{
     background: rgba(255, 255, 255, 0.1);;
     border-radius: 10px;
@@ -256,6 +261,11 @@ body {
 
     display: flex;
     flex-direction: column;
+}
+
+.dashboard-info-center:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
 .dashboard-info-right {
@@ -273,6 +283,11 @@ body {
     flex-direction: column;
 }
 
+.dashboard-info-right:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
 
 .dashboard-info-left-title{
     border: 1px solid red;
@@ -286,6 +301,11 @@ body {
     border: 1px solid red;
 
     flex: 1; /* Permet aux boîtes de prendre une largeur égale */
+}
+
+.dashboard-info-left-boxes:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
 
 .dashboard-info-left-boxes-title {
@@ -333,6 +353,11 @@ body {
     flex: 1; /* Permet aux boîtes de prendre une largeur égale */
 }
 
+.dashboard-info-right-boxes:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
 .dashboard-info-center-boxes {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
@@ -343,6 +368,10 @@ body {
     flex: 1; /* Permet aux boîtes de prendre une largeur égale */
 }
 
+.dashboard-info-center-boxes:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
 
 
 /* Projets List */
