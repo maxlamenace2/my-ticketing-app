@@ -10,42 +10,51 @@
     margin: 30px auto;
     max-width: 1200px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.my-project-info-container {
-    display: grid;
+.my-project-info-container-1 {
+    display: flex;
+    flex-direction: column;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     margin-bottom: 30px;
+
+
+    border: 1px solid #991919;
 }
 
-.my-project-info-container > div {
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    border-left: 4px solid #3498db;
+.my-project-info-container-2{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+
+    border: 1px solid #991919;
 }
 
-.my-project-info-container h1 {
-    font-size: 14px;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: 8px;
-    text-transform: uppercase;
+.my-project-info-container-1-id, .my-project-info-container-1-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
 }
 
-.my-project-info-container h1:nth-child(2) {
-    font-size: 20px;
-    color: #2c3e50;
-    text-transform: none;
-    margin-top: 5px;
+
+.my-project-info-container-2-contract {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.my-project-info-container p {
-    color: #555;
-    line-height: 1.6;
-    margin-top: 8px;
-}
+
+
 
 /* Collaborateurs badges */
 .cololaborators-list {
@@ -61,7 +70,7 @@
 }
 
 /* Boutons de contrat */
-.my-project-info button {
+.my-project-info-button {
     background: #3498db;
     color: white;
     border: none;
@@ -80,6 +89,22 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Section tickets */
 .my-project-tickets {
