@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/projects-list.css">
     <title>projet liste</title>
 </head>
 <body class = "dashboard-page">
@@ -29,37 +30,57 @@
     
     <main class = "projects-list-main">
         <section class="projects-list-section">
-            <h1 class="projects-list-title">Projects List</h1>
-            <div class="projects-list-container">
-                <div class="project-card">
-                    <h2 class="project-card-title">Project premier</h2>
-                    <p class="project-card-description">Ddqzdsqdddddddddddddddddddddddddddddddd</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project deuxième</h2>
-                    <p class="project-card-description">whsssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project troisième</h2>
-                    <p class="project-card-description">fsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project Timéo</h2>
-                    <p class="project-card-description">fqjkhshsjhjdhhshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project Timéo</h2>
-                    <p class="project-card-description">fqjkhshsjhjdhhshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project Timéo</h2>
-                    <p class="project-card-description">fqjkhshsjhjdhhshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.</p>
-                </div>
-                <div class="project-card">
-                    <h2 class="project-card-title">Project Timéo</h2>
-                    <p class="project-card-description">fqjkhshsjhjdhhshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.</p>
-                </div>
+            <div class="projects-list-header">
+                <h1 class="projects-list-title">Projects List</h1>
+                <a href="project-create.html" class="projects-list-create-btn">Create New Project</a>
             </div>
+
+
+            <div class="table-container">
+                <table class="ticket-table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Details</th>
+                            <th>Colaborateur</th>
+                            <th>Open Project</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12421</td>
+                            <td>Premier projet</td>
+                            <td><p>voici le détails du premier projet</p></td>
+                            <td>
+                                <span class = "cololaborators-list">bob</span>
+                                <span class = "cololaborators-list">alice</span>
+                                <span class = "cololaborators-list">yoan</span>
+                            </td>
+                            <td> 
+                                <a href = "project-detail.html" class="project-open_btn">Open</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>12421</td>
+                            <td>Premier projet</td>
+                            <td><p>voici le détails du premier projet</p></td>
+                            <td>
+                                <span class = "cololaborators-list">bob</span>
+                                <span class = "cololaborators-list">alice</span>
+                                <span class = "cololaborators-list">yoan</span>
+                            </td>
+                            <td> 
+                                <a href = "project-detail.html" class="project-open_btn">Open</a>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                        
+                </table>
+            </div>
+
         </section>
     </main>
 

@@ -1,0 +1,142 @@
+/*PROJECTS LIST PAGE */
+
+.projects-list-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid red;
+    height: auto;
+}
+.projects-list-section {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.projects-list-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fcfdff;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid red;
+}
+
+.projects-list-create-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 20px;
+    border: 1px solid red;
+}
+
+.projects-list-title {
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+
+.projects-list-container {
+    width: 100%;
+    border: 1px solid red;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid red;
+}
+
+
+/*NEWWWWWWWWWWWWWWWWWWWWWWWWWWWW*/
+
+
+.table-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    border: 1px solid red;
+}
+
+.ticket-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+    border: 1px solid red;
+}
+
+.ticket-table th {
+    text-align: left;
+    padding: 15px;
+    font-size: 13px;
+    color: #8e8e8e; 
+    font-weight: 600;
+    border-bottom: 1px solid #eef0f2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid red;
+}
+
+.ticket-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eef0f2;
+    font-size: 14px;
+    vertical-align: middle;
+    color: #dfd4d4;
+    border: 1px solid red;
+}
+
+.ticket-table td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cololaborators-list {
+    padding: 5px 10px;
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+
+.project-open_btn {
+    display: inline-block;
+    color: #3498db;
+    background: #ebf5fb; 
+    padding: 6px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.project-open_btn:hover {
+    background: #3498db;
+    color: #ffffff;
+    transform: translateY(-1px);
+    border: 1px solid red;
+}
+
+
+
+
+
+

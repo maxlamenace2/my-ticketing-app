@@ -1,0 +1,21 @@
+
+.project-create-main{
+    padding: 40px;
+    background-color: #f4f7fa;
+    min-height: calc(100vh - 80px);
+    border: 1px solid #a12121;
+}
+
+.project-create-section{
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.project-create-form {
+    display: flex;
+    flex-direction: column;
+}

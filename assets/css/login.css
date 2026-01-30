@@ -1,0 +1,98 @@
+
+.login-text {
+    font-family: 'Caveat', cursive;
+    font-size: 200%;
+    height: 200px;
+    border: 1px solid red;
+
+    /* Utilisation de Flexbox pour le centrage total */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+}
+
+.login-conection {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    max-width: 500px;
+    height: auto;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    border: 1px solid red;
+}
+
+.login-text1{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--white);
+    border: 1px solid red;
+}
+
+/* Container principal du formulaire */
+.login-interaction {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les blocs email et mdp */
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Aligne les labels à gauche */
+}
+
+/* Style des labels (Email / Mot de passe) */
+.form-group label {
+    color: #a0a0c0; /* Gris-bleu clair */
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+/*////////////////////////////////////////////////////////////////////////////*/
+/* Style des champs de saisie (Inputs) */
+.form-group input {
+    background-color: rgba(255, 255, 255, 0.05); /* Fond très sombre et transparent */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease; /* Animation fluide */
+    outline: none;
+}
+
+/* Effet quand on clique dans le champ (Focus) */
+.form-group input:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #3498db; /* Bleu plus vif pour montrer quel champ est actif */
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Légère lueur bleue */
+}
+
+/* Style du texte d'exemple (Placeholder) */
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+/*////////////////////////////////////////////////////////////////////////////*/
+
+
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border: 1px solid red;
+}
+.login-btn:hover {
+    background: #2980b9;
+}
