@@ -1,403 +1,311 @@
 /* =========================================
-   PROJECT DETAIL PAGE - STYLES
+   PROJECT DETAIL PAGE - STYLE COBALT HARMONISÉ
    ========================================= */
 
-/* Section info du projet */
-/* Section info du projet */
-.my-project-info {
-    background: #ffffff;
-    border-radius: 16px;
+/* --- CONFIGURATION GLOBALE DE LA PAGE --- */
+/* On cible le main pour appliquer le fond global */
+main {
+    flex: 1;
     padding: 40px;
-    margin: 30px auto;
-    max-width: 1200px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40px;
-    color: #2d3436;
+    background-color: #F4F7FE; /* Fond gris bleuté harmonisé */
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Inter', sans-serif;
 }
 
-/* Conteneurs de colonnes */
-.my-project-info-container-1, 
-.my-project-info-container-2 {
+/* =========================================
+   SECTION 1 : INFO DU PROJET (CARTE DU HAUT)
+   ========================================= */
+.my-project-info {
+    background: #FFFFFF;
+    border-radius: 20px; /* Arrondis modernes */
+    padding: 40px;
+    margin: 0 auto 30px auto; /* Centré avec marge en bas */
+    max-width: 1400px;
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12); /* Ombre douce bleutée */
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 60px;
     border: none; /* Suppression de la bordure rouge */
 }
 
+/* --- COLONNE GAUCHE --- */
 .my-project-info-container-1 {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
-.my-project-info-container-2 {
-    flex: 1;
-    align-items: flex-end; /* Aligne le temps et les boutons à droite */
-    text-align: right;
-}
-
-/* Groupes de données (ID, Nom, etc.) */
-.my-project-info-container-1 > div, 
+/* Alignement des lignes (Label + Valeur + Edit) */
+.my-project-info-container-1 > div,
 .my-project-info-container-2-hours {
     display: flex;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F4F7FE; /* Ligne de séparation très légère */
 }
 
-/* Typographie */
-.my-project-info h1 {
-    font-size: 1.1rem;
-    font-weight: 600;
+/* --- TYPOGRAPHIE INTELLIGENTE --- */
+/* Le 1er h1 est le Label (ex: "Nom :") */
+.my-project-info h1:first-child {
+    font-size: 14px;
+    font-weight: 500;
+    color: #A3AED0; /* Gris clair */
     margin: 0;
-    color: #636e72; /* Gris élégant pour les labels */
+    min-width: 100px; /* Aligne les valeurs verticalement */
 }
 
-/* Valeurs spécifiques (ID, Nom du projet) */
-.my-project-info-container-1-id h1:nth-child(2),
-.my-project-info-container-1-name h1:nth-child(2),
-.my-project-info-container-2-hours h1:nth-child(2) {
-    color: #2d3436;
-    font-size: 1.2rem;
+/* Le 2ème h1 est la Valeur (ex: "Premier Projet") */
+.my-project-info h1:nth-child(2) {
+    font-size: 18px;
     font-weight: 700;
+    color: #1B2559; /* Bleu Marine Sombre */
+    margin: 0;
 }
 
 /* Texte de description */
 .my-project-info p {
     margin: 0;
-    color: #4b6584;
+    color: #707EAE; /* Gris moyen */
+    font-size: 15px;
+    line-height: 1.5;
 }
 
-/* Boutons EDIT (discrets) */
+/* --- BADGES COLLABORATEURS --- */
+/* Note : j'utilise ta classe avec la faute de frappe pour que ça marche */
+.cololaborators-list {
+    display: inline-block;
+    background-color: #EFF4FB; /* Fond bleu très pâle */
+    color: #2D5BFF; /* Texte Cobalt */
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+/* --- BOUTONS EDIT (btn tag) --- */
 btn {
-    margin-left: auto;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #3498db;
+    margin-left: auto; /* Pousse le bouton à droite */
+    font-size: 11px;
+    font-weight: 700;
+    color: #2D5BFF;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 2px 8px;
+    background: transparent;
+    padding: 4px 8px;
     border-radius: 4px;
-    background: #f1f7ff;
-    transition: background 0.2s;
+    transition: all 0.2s;
 }
 
 btn:hover {
-    background: #d6eaff;
+    background: #EFF4FB;
+    text-decoration: underline;
 }
 
-/* Collaborateurs badges */
-.cololaborators-list {
-    display: inline-block;
-    background: #f0f2f5;
-    color: #4b6584;
-    padding: 5px 15px;
-    border-radius: 30px;
-    margin-right: 5px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    border: 1px solid #e1e4e8;
+/* --- COLONNE DROITE --- */
+.my-project-info-container-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-/* Conteneur boutons de contrat */
+/* Boutons de Contrat */
 .my-project-info-container-2-contract {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Boutons de contrat */
 .my-project-info-button {
-    background: #3498db;
+    background-color: #2D5BFF; /* Bleu Cobalt */
     color: white;
     border: none;
-    padding: 14px 28px;
-    border-radius: 10px;
+    padding: 14px;
+    border-radius: 12px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
     width: 100%;
-    min-width: 200px;
+    box-shadow: 0 4px 10px rgba(45, 91, 255, 0.2);
 }
 
 .my-project-info-button:hover {
-    background: #2980b9;
+    background-color: #2449CC;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 8px 20px rgba(45, 91, 255, 0.3);
 }
 
-.my-project-info-button:active {
-    transform: translateY(0);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Section tickets */
+/* =========================================
+   SECTION 2 : TICKETS (CARTE DU BAS)
+   ========================================= */
 .my-project-tickets {
-    background: white;
-    border-radius: 12px;
+    background: #FFFFFF;
+    border-radius: 20px;
     padding: 30px;
-    margin: 30px auto;
-    max-width: 1200px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 1400px;
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12);
 }
 
-/* Header de la liste de projets */
+/* Header de la section Tickets */
 .projects-list-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E0E5F2;
 }
 
 .projects-list-title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 700;
-    color: #2c3e50;
+    color: #1B2559;
+    margin: 0;
 }
 
+/* Bouton "New Ticket" */
 .projects-list-create-btn {
-    background: linear-gradient(135deg, #e91e63 0%, #ff4081 100%);
+    background-color: #2D5BFF;
     color: white;
-    padding: 12px 28px;
-    border-radius: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    box-shadow: 0 4px 10px rgba(45, 91, 255, 0.2);
 }
 
 .projects-list-create-btn:hover {
+    background-color: #2449CC;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
 }
 
+/* Sous-titre h2 */
 .my-project-tickets h2 {
-    font-size: 18px;
-    color: #555;
+    font-size: 16px;
+    color: #A3AED0;
     margin-bottom: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
-/* Tableau des tickets */
+/* =========================================
+   TABLEAU DES TICKETS
+   ========================================= */
 .ticket-table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 20px;
+    border-collapse: collapse;
 }
 
-.ticket-table thead {
-    background: #f8f9fa;
-}
-
-.ticket-table th {
-    padding: 15px 20px;
+/* En-têtes */
+.ticket-table thead th {
     text-align: left;
-    font-weight: 600;
-    font-size: 13px;
-    color: #666;
+    padding: 15px 20px;
+    font-size: 12px;
+    color: #A3AED0;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    border-bottom: 2px solid #e0e0e0;
+    border-bottom: 1px solid #E0E5F2;
 }
 
+/* Corps */
 .ticket-table tbody tr {
-    border-bottom: 1px solid #f0f0f0;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #F4F7FE;
 }
 
 .ticket-table tbody tr:hover {
-    background: #f8f9fa;
-    transform: scale(1.01);
+    background-color: #F8F9FC;
 }
 
+/* Cellules */
 .ticket-table td {
     padding: 18px 20px;
-    color: #2c3e50;
+    color: #2B3674; /* Bleu foncé */
     font-size: 14px;
+    font-weight: 600;
     vertical-align: middle;
 }
 
 .ticket-table td:first-child {
-    font-weight: 600;
-    color: #999;
+    color: #2D5BFF; /* ID en bleu cobalt */
 }
 
-.ticket-table td:nth-child(2) {
-    font-weight: 500;
-}
-
-/* Status Select Dropdown */
+/* SELECT STATUS STYLE */
 .status-select {
-    padding: 8px 16px;
-    border: 2px solid #e0e0e0;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border: 1px solid #E0E5F2;
+    border-radius: 8px;
     background: white;
-    color: #2c3e50;
+    color: #2B3674;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     outline: none;
-    transition: all 0.3s ease;
-    min-width: 140px;
-}
-
-.status-select:hover {
-    border-color: #3498db;
+    transition: all 0.2s;
 }
 
 .status-select:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    border-color: #2D5BFF;
+    box-shadow: 0 0 0 2px rgba(45, 91, 255, 0.1);
 }
 
-/* Styling based on selected option */
-.status-select option[value="Open"] {
-    color: #3498db;
-}
-
-.status-select option[value="In Progress"] {
-    color: #f39c12;
-}
-
-.status-select option[value="Closed"] {
-    color: #95a5a6;
-}
-
-/* Priorité badges */
-.ticket-table td:nth-child(4) {
-    font-weight: 600;
-}
-
-.ticket-table tr:nth-child(1) td:nth-child(4) {
-    color: #e74c3c;
-}
-
-.ticket-table tr:nth-child(2) td:nth-child(4) {
-    color: #f39c12;
-}
-
-.ticket-table tr:nth-child(3) td:nth-child(4) {
-    color: #95a5a6;
-}
-
-/* Bouton Open */
+/* BOUTONS D'ACTION DU TABLEAU */
 .project-open_btn {
     background: transparent;
-    border: 2px solid #3498db;
-    color: #3498db;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 13px;
+    border: 1px solid #2D5BFF;
+    color: #2D5BFF;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .project-open_btn:hover {
-    background: #3498db;
+    background: #2D5BFF;
     color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
 }
 
-/* Bouton Remove */
 .project-remove_btn {
     background: transparent;
-    border: 2px solid #e74c3c;
-    color: #e74c3c;
-    padding: 8px 20px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 13px;
+    border: 1px solid #EE5D50; /* Rouge doux */
+    color: #EE5D50;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .project-remove_btn:hover {
-    background: #e74c3c;
+    background: #EE5D50;
     color: white;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .my-project-info,
-    .my-project-tickets {
-        margin: 15px;
-        padding: 20px;
-    }
-
-    .my-project-info-container {
-        grid-template-columns: 1fr;
-    }
-
-    .projects-list-header {
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
+@media (max-width: 900px) {
+    .my-project-info {
         flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+        gap: 30px;
+    }
+    
+    .my-project-info-container-1 > div {
+        flex-wrap: wrap;
     }
 
-    .ticket-table {
-        font-size: 12px;
-    }
-
-    .ticket-table th,
-    .ticket-table td {
-        padding: 12px 10px;
-    }
-
-    .ticket-table thead {
-        display: none;
-    }
-
-    .ticket-table tbody tr {
-        display: block;
-        margin-bottom: 15px;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        padding: 15px;
-    }
-
-    .ticket-table td {
-        display: block;
-        text-align: right;
-        padding: 8px 0;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .ticket-table td:before {
-        content: attr(data-label);
-        float: left;
-        font-weight: 600;
-        color: #666;
-    }
-
-    .ticket-table td:last-child {
-        border-bottom: none;
-        text-align: center;
+    .my-project-tickets {
+        overflow-x: auto;
     }
 }

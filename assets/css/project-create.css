@@ -1,72 +1,97 @@
-/* Main container */
+/* =========================================
+   PROJECT CREATE PAGE - STYLE COBALT HARMONISÉ
+   ========================================= */
+
+/* --- LAYOUT PRINCIPAL --- */
 .project-create-main {
-    padding: 60px 20px;
-    background-color: #f4f7fa; /* Gris très clair pour faire ressortir la carte */
+    flex: 1;
+    padding: 40px;
+    background-color: #F4F7FE; /* Fond gris bleuté harmonisé */
     min-height: calc(100vh - 80px);
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: 'Inter', system-ui, sans-serif;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;     /* Centrage vertical */
+    font-family: 'Segoe UI', 'Inter', sans-serif;
 }
 
-/* La carte du formulaire */
+/* --- CARTE CONTENEUR --- */
 .project-create-section {
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    max-width: 600px; /* Plus étroit pour une meilleure lecture */
+    border-radius: 20px; /* Arrondis modernes */
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); /* Ombre douce bleutée */
+    max-width: 600px;
     width: 100%;
-    margin: 0 auto;
+    animation: fadeIn 0.5s ease-out;
 }
 
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Titre H1 */
 .project-create-section h1 {
-    color: #1e293b;
-    font-size: 24px;
+    color: #1B2559; /* Bleu marine sombre */
+    font-size: 26px;
     font-weight: 700;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left; /* Aligné à gauche comme les autres pages */
 }
 
-/* Structure du formulaire */
+/* --- FORMULAIRE --- */
 .project-create-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px; /* L'espacement est géré par les marges des divs */
 }
 
-/* Groupes d'inputs */
+/* Ciblage des classes spécifiques de ton HTML pour les traiter comme des groupes */
+.form-id, 
+.form-name, 
+.form-details, 
+.form-collaborators, 
 .project-create-form > div {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 20px;
 }
 
 /* Labels */
 label {
     font-size: 14px;
-    font-weight: 600;
-    color: #64748b;
+    font-weight: 700; /* Gras pour le style pro */
+    color: #1B2559;   /* Bleu marine */
+    margin-left: 4px;
 }
 
-/* Inputs et Textarea */
+/* Champs de saisie (Inputs & Textarea) */
 input[type="text"],
 textarea {
-    padding: 12px 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
+    padding: 14px 20px;
+    border: 1px solid #E0E5F2; /* Bordure grise subtile */
+    border-radius: 12px;       /* Arrondis */
     font-size: 15px;
-    color: #1e293b;
-    background-color: #f8fafc;
+    color: #1B2559;
+    background-color: #FFFFFF;
     transition: all 0.2s ease;
-    outline: none;
+    width: 100%;
+    box-sizing: border-box; /* Important pour ne pas dépasser */
 }
 
+/* Placeholder */
+input::placeholder, textarea::placeholder {
+    color: #A3AED0;
+}
+
+/* État Focus (Clic) */
 input:focus, 
 textarea:focus {
-    border-color: #3498db;
-    background-color: #ffffff;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    outline: none;
+    border-color: #2D5BFF; /* Bleu Cobalt */
+    box-shadow: 0 0 0 4px rgba(45, 91, 255, 0.1);
 }
 
 textarea {
@@ -74,24 +99,26 @@ textarea {
     resize: vertical;
 }
 
-/* Bouton de soumission */
+/* --- BOUTON DE SOUMISSION --- */
+/* On cible le bouton peu importe où il est dans la div */
 .project-create-form button[type="submit"] {
-    margin-top: 10px;
-    background: #3498db;
+    width: 100%;
+    background-color: #2D5BFF; /* Bleu Cobalt */
     color: white;
     border: none;
-    padding: 14px;
-    border-radius: 10px;
+    padding: 16px;
+    border-radius: 12px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 .project-create-form button[type="submit"]:hover {
-    background: #2980b9;
+    background-color: #2449CC;
+    box-shadow: 0px 10px 20px rgba(45, 91, 255, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
 .project-create-form button[type="submit"]:active {

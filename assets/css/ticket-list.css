@@ -1,0 +1,173 @@
+/* =========================================
+   1. LE CONTENEUR PARENT (C'est lui la clé !)
+   ========================================= */
+/* C'est la balise <main> de votre HTML. 
+   On lui dit de prendre toute la place disponible. */
+.projects-list-main {
+    flex: 1;                 /* S'étire pour remplir l'espace à droite de la sidebar */
+    display: flex;           /* Permet de gérer le contenu interne */
+    flex-direction: column;  
+    background-color: #F4F7FE; /* Fond gris bleuté global */
+    padding: 30px;           /* L'ESPACE autour de la carte blanche (comme sur la photo) */
+    min-height: calc(100vh - 60px); /* Hauteur min pour aller jusqu'en bas */
+    box-sizing: border-box;
+}
+
+/* =========================================
+   2. LA CARTE BLANCHE (Le conteneur du tableau)
+   ========================================= */
+.my-tickets-list {
+    background: #FFFFFF;
+    border-radius: 20px;     /* Arrondis marqués */
+    padding: 30px;           /* Espace interne */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Ombre légère */
+    font-family: 'Segoe UI', sans-serif;
+
+    /* --- GESTION DE LA LARGEUR --- */
+    width: 100%;             /* Force la carte à prendre 100% du parent (.projects-list-main) */
+    margin: 0;               /* Pas de marge externe, c'est le padding du parent qui gère l'espace */
+    box-sizing: border-box;  /* Empêche le padding de faire déborder la boite */
+}
+
+/* =========================================
+   3. EN-TÊTE (Titre + Bouton)
+   ========================================= */
+.ticket-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.projects-list-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1B2559;
+    margin: 0;
+}
+
+.projects-list-create-btn {
+    background-color: #2D5BFF;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s;
+    box-shadow: 0 4px 10px rgba(45, 91, 255, 0.2);
+}
+
+.projects-list-create-btn:hover {
+    background-color: #2449CC;
+}
+
+/* Sous-titre "Tickets for all project" */
+.my-tickets-list h2 {
+    font-size: 14px;
+    color: #A3AED0;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   4. LE TABLEAU (Style identique à la photo)
+   ========================================= */
+.ticket-table-list {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px; /* Sécurité pour mobile */
+}
+
+/* En-têtes */
+.ticket-table-list thead th {
+    text-align: left;
+    padding: 15px 10px;
+    color: #A3AED0; /* Gris clair */
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid #E0E5F2;
+}
+
+/* Lignes */
+.ticket-table-list tbody tr {
+    border-bottom: 1px solid #F4F7FE;
+    transition: background-color 0.2s;
+}
+
+.ticket-table-list tbody tr:hover {
+    background-color: #F8F9FC;
+}
+
+/* Cellules */
+.ticket-table-list td {
+    padding: 20px 10px;
+    color: #2B3674;
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/* ID en bleu */
+.ticket-table-list td:first-child {
+    color: #2D5BFF;
+    font-weight: 700;
+}
+
+/* =========================================
+   5. BOUTONS & SELECTS
+   ========================================= */
+.status-select {
+    padding: 8px 12px;
+    border: 1px solid #E0E5F2;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #2B3674;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+    min-width: 130px;
+}
+
+.ticket-table-list a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Bouton Open */
+.ticket-open_btn {
+    background: transparent;
+    border: 1px solid #2D5BFF;
+    color: #2D5BFF;
+    padding: 8px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.ticket-open_btn:hover {
+    background: #2D5BFF;
+    color: white;
+}
+
+/* Bouton Remove */
+.ticket-remove_btn {
+    background: transparent;
+    border: 1px solid #EE5D50;
+    color: #EE5D50;
+    padding: 8px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.ticket-remove_btn:hover {
+    background: #EE5D50;
+    color: white;
+}

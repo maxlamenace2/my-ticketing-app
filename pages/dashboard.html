@@ -3,94 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/dashboard.css">
-    <title>dashboard</title>
+    <title>Dashboard</title>
 </head>
-<body class = "dashboard-page">
+<body class="dashboard-page">
 
     <header class="header">
         <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo MyTicket" class="logo-image">
-        </div>
-        <div class = "header-nav">
-            <nav>
-                <ul>
-                    <li><a href="projects-list.html">Projects</a></li>
-                    <li><a href="tickets-list.html">Tickets</a></li>
-                    <li><a href="ticket-create.html">Create ticket</a></li>
-                    <li><a href="dashboard.html" class="active">dashboard</a></li>
-                    <li><a href="../index.html">Logout</a></li>
-                </ul>
-            </nav>
+            <img src="../assets/img/logo_b.png" alt="Logo MyTicket" class="logo-image">
         </div>
     </header>
 
-    <main class = "dashboard-main">
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="projects-list.html">Projects</a></li>
+                    <li><a href="project-create.html">Project Create</a></li>
+                    <li><a href="tickets-list.html">Tickets</a></li>
+                    <li><a href="ticket-create.html">Create ticket</a></li>
+                    <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard-main">
 
             <section class="dashboard-info-left">
-                <h2 class = "dashboard-info-left-title">information général</h2>
-                <div class = "dashboard-info-left-boxes">
-                    <h3 class = "dashboard-info-left-boxes-title">Ticket Past Due</h3>
-                    <div class = "dashboard-info-left-boxes-stats">
-                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
-                        <h3 class = "dashboard-info-left-boxes-stats-number">5</h3>
+                <div class="dashboard-box stat-box">
+                    <h3 class="box-title">Ticket Past Due</h3>
+                    <div class="stat-content">
+                        <div class="stat-icon bg-red">⚠️</div> 
+                        <span class="stat-number">5</span>
                     </div>
                 </div>
-                <div class = "dashboard-info-left-boxes">
-                    <h3 class = "dashboard-info-left-boxes-title">New Tickets Today</h3>
-                    <div class = "dashboard-info-left-boxes-stats">
-                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
-                        <h3 class = "dashboard-info-left-boxes-stats-number">45</h3>
+
+                <div class="dashboard-box stat-box">
+                    <h3 class="box-title">New Tickets Today</h3>
+                    <div class="stat-content">
+                        <div class="stat-icon bg-blue">Wait</div>
+                        <span class="stat-number">45</span>
                     </div>
                 </div>
-                <div class = "dashboard-info-left-boxes">
-                    <h3 class = "dashboard-info-left-boxes-title">Tickets Closed Today</h3>
-                    <div class = "dashboard-info-left-boxes-stats">
-                        <img src="../assets/img/ticket_logo.png" alt="Ticket Logo" class="dashboard-info-left-boxes-stats-image">
-                        <h3 class = "dashboard-info-left-boxes-stats-number">22</h3>
+
+                <div class="dashboard-box stat-box">
+                    <h3 class="box-title">Tickets Closed Today</h3>
+                    <div class="stat-content">
+                        <div class="stat-icon bg-green">✔</div>
+                        <span class="stat-number">22</span>
                     </div>
                 </div>
             </section>
-
-
 
             <section class="dashboard-info-center">
-                <div class="dashboard-info-center-boxes">
-                    <h2>Ticket Payant</h2>
-                </div>
-                <div class="dashboard-info-center-boxes">
-                    <h2>Ticket gratuit</h2>
+                <div class="dashboard-box">
+                    <h2 class="section-title">Ticket Payant</h2>
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Project</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bug Login</td>
+                                <td>Projet Alpha</td>
+                                <td><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                            <tr>
+                                <td>Update CSS</td>
+                                <td>Projet Beta</td>
+                                <td><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                            <tr>
+                                <td>Server Error</td>
+                                <td>Projet Gamma</td>
+                                <td><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
+                <div class="dashboard-box">
+                    <h2 class="section-title">Ticket Gratuit</h2>
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Project</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Typo Fix</td>
+                                <td>Internal</td>
+                                <td><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                            <tr>
+                                <td>Color change</td>
+                                <td>Marketing</td>
+                                <td><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </section>
-
-
-
 
             <section class="dashboard-info-right">
-                <div class = "dashboard-info-right-boxes">
-                    <h2 class = "dashboard-info-right-title-up"> Ticket Recent </h2> 
+                <div class="dashboard-box">
+                    <h2 class="section-title">Ticket Recent</h2> 
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Crash App</td>
+                                <td style="text-align: right;"><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                            <tr>
+                                <td>DB Backup</td>
+                                <td style="text-align: right;"><a href="ticket-detail.html" class="action-btn">Open</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class = "dashboard-info-right-boxes">
-                    <h2 class = "dashboard-info-right-title-down"> Liste des clients </h2> 
+
+                <div class="dashboard-box">
+                    <h2 class="section-title">Liste des clients</h2> 
+                    <table class="dashboard-table">
+                        <thead>
+                            <tr>
+                                <th>Client Name</th>
+                                <th style="text-align: right;">Project</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Google</td>
+                                <td style="text-align: right;"><a href="project-detail.html" class="action-btn">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Amazon</td>
+                                <td style="text-align: right;"><a href="project-detail.html" class="action-btn">View</a></td>
+                            </tr>
+                            <tr>
+                                <td>Amazon</td>
+                                <td style="text-align: right;"><a href="project-detail.html" class="action-btn">View</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
+
         </main>
-
-    
-        
-
-
-
-
-
-    
-
-    <footer class="footer">
-        <p>&copy; 2026 My Ticketing App - Tous droits réservés.</p>
-    </footer>
-    
+    </div>
 </body>
 </html>

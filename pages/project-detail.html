@@ -12,135 +12,154 @@
 
     <header class="header">
         <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo MyTicket" class="logo-image">
-        </div>
-        <div class = "header-nav">
-            <nav>
-                <ul>
-                    <li><a href="projects.html" class="active" >My Projects</a></li>
-                    <li><a href="projects-list.html">Projects</a></li>
-                    <li><a href="tickets-list.html">Tickets</a></li>
-                    <li><a href="ticket-create.html">Create ticket</a></li>
-                    <li><a href="dashboard.html">dashboard</a></li>
-                    <li><a href="../index.html">Logout</a></li>
-                </ul>
-            </nav>
+            <img src="../assets/img/logo_b.png" alt="Logo MyTicket" class="logo-image">
         </div>
     </header>
 
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="projects-list.html">Projects</a></li>
+                    <li><a href="project-create.html">Project Create</a></li>
+                    <li><a href="projects-details.html" class="active">Project Details</a></li>
+                    <li><a href="tickets-list.html">Tickets</a></li>
+                    <li><a href="ticket-create.html">Create ticket</a></li>
+                    <li><a href="dashboard.html" >Dashboard</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
 
-    <main>
-        <section class = "my-project-info">
-            <div class = "my-project-info-container-1">
-                <div class = "my-project-info-container-1-id">
-                    <h1>Id :</h1>
-                    <h1>14224</h1>
-                    <btn>EDIT</btn>
+
+        <main>
+            <section class = "my-project-info">
+                <div class = "my-project-info-container-1">
+                    <div class = "my-project-info-container-1-id">
+                        <h1>Id :</h1>
+                        <h1>14224</h1>
+                        <btn>EDIT</btn>
+                    </div>
+                    <div class = "my-project-info-container-1-name">
+                        <h1>Nom</h1>
+                        <h1>Premier project</h1>
+                        <btn>EDIT</btn>
+                    </div>
+                    <div class = "my-project-info-container-1-details">
+                        <h1>Détails : </h1>
+                        <p>Voici les détails du premier projet</p>
+                        <btn>EDIT</btn>
+                    </div>
+                    <div class = "my-project-info-container-1-colaborators">
+                        <h1>Colaborateurs :</h1>
+                        <span class = "cololaborators-list">bob</span>
+                        <span class = "cololaborators-list">alice</span>
+                        <span class = "cololaborators-list">yoan</span>
+                        <btn>EDIT</btn>
+                    </div>
                 </div>
-                <div class = "my-project-info-container-1-name">
-                    <h1>Nom</h1>
-                    <h1>Premier project</h1>
-                    <btn>EDIT</btn>
+                <div class = "my-project-info-container-2">
+                    <div class = "my-project-info-container-2-hours">
+                        <h1>hour Spend</h1>
+                        <h1>34h/40</h1>
+                        <btn>EDIT</btn>
+                    </div>
+                    <div class = "my-project-info-container-2-contract">
+                        <button class="my-project-info-button">download Contract</button>
+                        <button class="my-project-info-button">Upload Contract</button>
+                    </div>
                 </div>
-                <div class = "my-project-info-container-1-details">
-                    <h1>Détails : </h1>
-                    <p>Voici les détails du premier projet</p>
-                    <btn>EDIT</btn>
+            </section>
+
+
+
+            <section class = "my-project-tickets">
+                <div class="projects-list-header">
+                    <h1 class="projects-list-title">Ticket List</h1>
+                    <a href="ticket-create.html" class="projects-list-create-btn">New ticket</a>
                 </div>
-                <div class = "my-project-info-container-1-colaborators">
-                    <h1>Colaborateurs :</h1>
-                    <span class = "cololaborators-list">bob</span>
-                    <span class = "cololaborators-list">alice</span>
-                    <span class = "cololaborators-list">yoan</span>
-                    <btn>EDIT</btn>
-                </div>
-            </div>
-            <div class = "my-project-info-container-2">
-                <div class = "my-project-info-container-2-hours">
-                    <h1>hour Spend</h1>
-                    <h1>34h/40</h1>
-                    <btn>EDIT</btn>
-                </div>
-                <div class = "my-project-info-container-2-contract">
-                    <button class="my-project-info-button">download Contract</button>
-                    <button class="my-project-info-button">Upload Contract</button>
-                </div>
-            </div>
-        </section>
+
+                <h2>Tickets for this project</h2>
+                <table class="ticket-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Status</th>
+                            <th>Priority</th>
+                            <th>Assigned To</th>
+                            <th>Open</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>001</td>
+                            <td>Fix login bug</td>
+                            <td>
+                                <select class="status-select">
+                                    <option value="Nouveau" selected>Nouveau</option>
+                                    <option value="en-cours">En cours</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="En-attente-client">En attente client</option>
+                                    <option value="Terminé">Terminé</option>
+                                    <option value="a-valider-client">À valider (client)</option>
+                                    <option value="Valide">Validé</option>
+                                    <option value="Refuse">Refusé</option>
+                                </select>
+                            </td>
+                            <td>High</td>
+                            <td>Alice</td>
+                            <td><a href = "ticket-detail.html">  <button class="project-open_btn">Open</button> </a></td>
+                            <td><button class="project-remove_btn">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>Update user profile page</td>
+                            <td>
+                                <select class="status-select">
+                                    <option value="Nouveau" selected>Nouveau</option>
+                                    <option value="en-cours">En cours</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="En-attente-client">En attente client</option>
+                                    <option value="Terminé">Terminé</option>
+                                    <option value="a-valider-client">À valider (client)</option>
+                                    <option value="Valide">Validé</option>
+                                    <option value="Refuse">Refusé</option>
+                                </select>
+                            </td>
+                            <td>Medium</td>
+                            <td>Bob</td>
+                            <td><a href = "ticket-detail.html">  <button class="project-open_btn">Open</button> </a></td>
+                            <td><button class="project-remove_btn">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td>003</td>
+                            <td>Add password reset feature</td>
+                            <td>
+                                <select class="status-select">
+                                    <option value="Nouveau" selected>Nouveau</option>
+                                    <option value="en-cours">En cours</option>
+                                    <option value="Closed">Closed</option>
+                                    <option value="En-attente-client">En attente client</option>
+                                    <option value="Terminé">Terminé</option>
+                                    <option value="a-valider-client">À valider (client)</option>
+                                    <option value="Valide">Validé</option>
+                                    <option value="Refuse">Refusé</option>
+                                </select>
+                            </td>
+                            <td>Low</td>
+                            <td>Charlie</td>
+                            <td><a href = "ticket-detail.html">  <button class="project-open_btn">Open</button> </a></td>
+                            <td><button class="project-remove_btn">Remove</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
 
-
-        <section class = "my-project-tickets">
-            <div class="projects-list-header">
-                <h1 class="projects-list-title">Projects List</h1>
-                <a href="ticket-create.html" class="projects-list-create-btn">New ticket</a>
-            </div>
-
-            <h2>Tickets for this project</h2>
-            <table class="ticket-table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Title</th>
-                        <th>Status</th>
-                        <th>Priority</th>
-                        <th>Assigned To</th>
-                        <th>Open</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Fix login bug</td>
-                        <td>
-                            <select class="status-select">
-                                <option value="Open" selected>Open</option>
-                                <option value="In Progress">In Progress</option>
-                                <option value="Closed">Closed</option>
-                            </select>
-                        </td>
-                        <td>High</td>
-                        <td>Alice</td>
-                        <td><button class="project-open_btn">Open</button></td>
-                        <td><button class="project-remove_btn">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>002</td>
-                        <td>Update user profile page</td>
-                        <td>
-                            <select class="status-select">
-                                <option value="Open" selected>Open</option>
-                                <option value="In Progress">In Progress</option>
-                                <option value="Closed">Closed</option>
-                            </select>
-                        </td>
-                        <td>Medium</td>
-                        <td>Bob</td>
-                        <td><button class="project-open_btn">Open</button></td>
-                        <td><button class="project-remove_btn">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>003</td>
-                        <td>Add password reset feature</td>
-                        <td>
-                            <select class="status-select">
-                                <option value="Open" selected>Open</option>
-                                <option value="In Progress">In Progress</option>
-                                <option value="Closed">Closed</option>
-                            </select>
-                        </td>
-                        <td>Low</td>
-                        <td>Charlie</td>
-                        <td><button class="project-open_btn">Open</button></td>
-                        <td><button class="project-remove_btn">Remove</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-
-    </main>
+        </main>
+    </div>
 
     
     

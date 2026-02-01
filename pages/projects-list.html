@@ -3,99 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/projects-list.css">
-    <title>projet liste</title>
+    <title>Projects List</title>
 </head>
-<body class = "dashboard-page">
+<body class="dashboard-page">
 
     <header class="header">
         <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo MyTicket" class="logo-image">
-        </div>
-        <div class = "header-nav">
-            <nav>
-                <ul>
-                    <li><a href="projects-list.html" class="active" >Projects</a></li>
-                    <li><a href="tickets-list.html">Tickets</a></li>
-                    <li><a href="ticket-create.html">Create ticket</a></li>
-                    <li><a href="dashboard.html">dashboard</a></li>
-                    <li><a href="../index.html">Logout</a></li>
-                </ul>
-            </nav>
+            <img src="../assets/img/logo_b.png" alt="Logo MyTicket" class="logo-image">
         </div>
     </header>
 
-    
-    <main class = "projects-list-main">
-        <section class="projects-list-section">
-            <div class="projects-list-header">
-                <h1 class="projects-list-title">Projects List</h1>
-                <a href="project-create.html" class="projects-list-create-btn">Create New Project</a>
-            </div>
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="projects-list.html" class="active">Projects</a></li>
+                    <li><a href="project-create.html">Project Create</a></li>
+                    <li><a href="tickets-list.html">Tickets</a></li>
+                    <li><a href="ticket-create.html">Create ticket</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
 
+        <main class="projects-list-main">
+            <section class="projects-list-section">
+                
+                <div class="projects-list-header">
+                    <h1 class="projects-list-title">Projects List</h1>
+                    <a href="project-create.html" class="projects-list-create-btn">+ Create New Project</a>
+                </div>
 
-            <div class="table-container">
-                <table class="ticket-table">
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Nom</th>
-                            <th>Details</th>
-                            <th>Colaborateur</th>
-                            <th>Open Project</a></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>12421</td>
-                            <td>Premier projet</td>
-                            <td><p>voici le détails du premier projet</p></td>
-                            <td>
-                                <span class = "cololaborators-list">bob</span>
-                                <span class = "cololaborators-list">alice</span>
-                                <span class = "cololaborators-list">yoan</span>
-                            </td>
-                            <td> 
-                                <a href = "project-detail.html" class="project-open_btn">Open</a>
-                            </td>
-                        </tr>
+                <div class="table-container">
+                    <table class="ticket-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Project Name</th>
+                                <th>Description</th>
+                                <th>Team</th>
+                                <th style="text-align: center;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#14224</td>
+                                <td>Premier projet</td>
+                                <td><p>Refonte complète de l'interface utilisateur pour le client Alpha.</p></td>
+                                <td>
+                                    <span class="collaborator-badge">Bob</span>
+                                    <span class="collaborator-badge">Alice</span>
+                                    <span class="collaborator-badge">Yoan</span>
+                                </td>
+                                <td style="text-align: center;"> 
+                                    <a href="project-detail.html" class="project-open_btn">Open</a>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>12421</td>
-                            <td>Premier projet</td>
-                            <td><p>voici le détails du premier projet</p></td>
-                            <td>
-                                <span class = "cololaborators-list">bob</span>
-                                <span class = "cololaborators-list">alice</span>
-                                <span class = "cololaborators-list">yoan</span>
-                            </td>
-                            <td> 
-                                <a href = "project-detail.html" class="project-open_btn">Open</a>
-                            </td>
-                        </tr>
-                    </tbody>
+                            <tr>
+                                <td>#14225</td>
+                                <td>Dashboard App</td>
+                                <td><p>Intégration des API de paiement et sécurisation des données.</p></td>
+                                <td>
+                                    <span class="collaborator-badge">Alice</span>
+                                    <span class="collaborator-badge">Marc</span>
+                                </td>
+                                <td style="text-align: center;"> 
+                                    <a href="project-detail.html" class="project-open_btn">Open</a>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>#14226</td>
+                                <td>Marketing Site</td>
+                                <td><p>Création de la landing page pour la campagne d'été.</p></td>
+                                <td>
+                                    <span class="collaborator-badge">Yoan</span>
+                                </td>
+                                <td style="text-align: center;"> 
+                                    <a href="project-detail.html" class="project-open_btn">Open</a>
+                                </td>
+                            </tr>
 
-                        
-                </table>
-            </div>
+                        </tbody>
+                    </table>
+                </div>
 
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 
-    
-        
-
-
-
-
-
-    
-
-    <footer class="footer">
-        <p>&copy; 2026 My Ticketing App - Tous droits réservés.</p>
-    </footer>
-    
 </body>
 </html>

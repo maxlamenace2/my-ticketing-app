@@ -3,69 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/ticket-create.css">
-    <title>ticket create</title>
+    <title>Create Ticket</title>
 </head>
-<body class = "dashboard-page">
+
+<body class="dashboard-page">
 
     <header class="header">
         <div class="logo">
-            <img src="../assets/img/logo.png" alt="Logo MyTicket" class="logo-image">
-        </div>
-        <div class = "header-nav">
-            <nav>
-                <ul>
-                    <li><a href="projects-list.html">Projects</a></li>
-                    <li><a href="tickets-list.html" >Tickets</a></li>
-                    <li><a href="ticket-create.html" class="active" >Create ticket</a></li>
-                    <li><a href="dashboard.html">dashboard</a></li>
-                    <li><a href="../index.html">Logout</a></li>
-                </ul>
-            </nav>
+            <img src="../assets/img/logo_b.png" alt="Logo Maxapp" class="logo-image">
         </div>
     </header>
 
+    <div class="app-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="projects-list.html">Projects</a></li>
+                    <li><a href="project-create.html">Project Create</a></li>
+                    <li><a href="tickets-list.html">Tickets</a></li>
+                    <li><a href="ticket-create.html" class="active">Create ticket</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="../index.html">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
     
-    <main class="ticket">
-        <section class = "ticket-create-section">
-            <h1>Create a new Ticket</h1>
-            <form class = "ticket-create-form">
-                <div class="form-id">
-                    <label for="project-id">ID</label>
-                    <input type="text" id="project-id" name="project-id" required>
-                </div>
-                <div class="form-name">
-                    <label for="project-name">Title</label>
-                    <input type="text" id="project-name" name="project-name" required>
-                </div>
-                <div class="form-details">
-                    <label for="project-details">Project Details:</label>
-                    <textarea id="project-details" name="project-details" required></textarea>
-                </div>
-                <div class=""form-collaborators">
-                    <label for="collaborators">Collaborators (comma separated):</label>
-                    <input type="text" id="collaborators" name="collaborators">
-                </div>
-                <div class = "form-btn"></div>
-                    <button type="submit">Create Project</button>
-                </div>
-            </form>
-        </section>
-    </main>
-    
-        
+        <main class="ticket-create-main">
+            <section class="ticket-create-section">
+                <h1>Create a new Ticket</h1>
+                <form class="ticket-create-form">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="project-id">ID</label>
+                            <input type="text" id="project-id" name="project-id" placeholder="Ex: T-101" required>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="project-select">Associated Project</label>
+                            <select id="project-select" name="project-select" required>
+                                <option value="">-- Select --</option>
+                                <option value="1">Alpha Project</option>
+                                <option value="2">Beta Project</option>
+                            </select>
+                        </div>
+                    </div>
 
+                    <div class="form-group">
+                        <label for="project-name">Title</label>
+                        <input type="text" id="project-name" name="project-name" placeholder="Enter ticket title" required>
+                    </div>
 
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ticket-status">Status</label>
+                            <select id="ticket-status" name="ticket-status">
+                                <option value="Nouveau" selected>Nouveau</option>
+                                <option value="en-cours">En cours</option>
+                                <option value="Closed">Closed</option>
+                                <option value="En-attente-client">En attente client</option>
+                                <option value="Terminé">Terminé</option>
+                                <option value="a-valider-client">À valider (client)</option>
+                                <option value="Valide">Validé</option>
+                                <option value="Refuse">Refusé</option>
+                            </select>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="ticket-priority">Priority</label>
+                            <select id="ticket-priority" name="ticket-priority">
+                                <option value="">-- None --</option>
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
 
-    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ticket-type">Billing Type</label>
+                            <select id="ticket-type" name="ticket-type">
+                                <option value="included">Inclus</option>
+                                <option value="billable">Facturable</option>
+                            </select>
+                        </div>
 
-    <footer class="footer">
-        <p>&copy; 2026 My Ticketing App - Tous droits réservés.</p>
-    </footer>
-    
+                        <div class="form-group">
+                            <label for="real-time">Real Time Spent</label>
+                            <input type="text" id="real-time" name="real-time" placeholder="Ex: 2h 30m">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="project-details">Description</label>
+                        <textarea id="project-details" name="project-details" placeholder="Describe the details..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="collaborators">Collaborators</label>
+                        <input type="text" id="collaborators" name="collaborators" placeholder="Jean, Marie, Marc...">
+                    </div>
+
+                    <div class="form-btn-container">
+                        <button type="submit" class="submit-btn">Create Ticket</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
 </body>
 </html>

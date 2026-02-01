@@ -1,0 +1,160 @@
+/* =========================================
+   LAYOUT GLOBAL (Main Content)
+   ========================================= */
+.ticket-detail-main {
+    flex: 1;
+    background-color: #F4F7FE; /* Fond gris bleuté global */
+    padding: 30px;
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* En-tête au dessus de la carte (Titre + Lien retour) */
+.ticket-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ticket-detail-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1B2559;
+    margin: 0;
+}
+
+.back-btn {
+    text-decoration: none;
+    color: #A3AED0;
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-btn:hover {
+    color: #2D5BFF;
+}
+
+/* =========================================
+   CARTE PRINCIPALE (Container Blanc)
+   ========================================= */
+.ticket-detail-section {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 10px 30px; /* Padding vertical réduit car les rangées en ont déjà */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   STYLE DES LIGNES (ROWS)
+   ========================================= */
+.detail-row {
+    display: flex;
+    justify-content: space-between; /* Pousse le bouton Edit à droite */
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #F4F7FE; /* Ligne de séparation très légère */
+}
+
+/* Supprimer la ligne de la dernière rangée */
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+/* Conteneur pour Label et Valeur à gauche */
+.info-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espace entre le label gris et la valeur */
+    max-width: 80%;
+}
+
+/* TYPOGRAPHIE */
+.label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #A3AED0; /* Gris clair */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.value {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1B2559; /* Bleu marine foncé */
+}
+
+.description-text {
+    font-weight: 500;
+    color: #586185;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.text-blue {
+    color: #2D5BFF; /* Bleu Cobalt pour l'ID */
+}
+
+/* =========================================
+   BOUTON EDIT
+   ========================================= */
+.edit-btn {
+    background: transparent;
+    border: none;
+    color: #2D5BFF;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.2s;
+    background-color: #eff4fb; /* Fond bleu très pâle par défaut */
+}
+
+.edit-btn:hover {
+    background-color: #2D5BFF;
+    color: white;
+}
+
+/* =========================================
+   ÉLÉMENTS SPÉCIFIQUES (Badges, Avatars)
+   ========================================= */
+
+/* Badge de statut */
+.status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.status-nouveau {
+    background-color: #E6F7FF;
+    color: #0095FF;
+}
+
+/* Liste collaborateurs */
+.collaborators-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    background-color: #2D5BFF;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+}

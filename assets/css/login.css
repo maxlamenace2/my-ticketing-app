@@ -1,98 +1,116 @@
+/* =========================================
+   LOGIN PAGE - STYLE COBALT HARMONISÉ
+   ========================================= */
 
-.login-text {
-    font-family: 'Caveat', cursive;
-    font-size: 200%;
-    height: 200px;
-    border: 1px solid red;
-
-    /* Utilisation de Flexbox pour le centrage total */
+/* Arrière-plan de la page */
+body {
+    background-color: #F4F7FE; /* Même gris bleuté que le dashboard */
     display: flex;
-    justify-content: center; /* Centre horizontalement */
-    align-items: center;     /* Centre verticalement */
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 }
 
+/* Titre principal "Welcome to my ticket app" */
+.login-text {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1B2559; /* Marine très sombre */
+    font-family: 'Caveat', cursive;
+    font-size: 3rem;
+}
+
+/* La carte de connexion blanche */
 .login-conection {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    max-width: 500px;
-    height: auto;
-    margin: auto;
-    backdrop-filter: blur(10px);
-    border: 1px solid red;
+    background: #FFFFFF; /* Blanc pur */
+    padding: 40px;
+    border-radius: 20px; /* Arrondis pro style Behance */
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); /* Ombre douce bleue */
+    max-width: 450px;
+    width: 90%;
+    margin: 20px auto;
+    backdrop-filter: none; /* On enlève le flou car le fond est opaque */
 }
 
-.login-text1{
+/* Texte "Veuillez vous connecter..." */
+.login-text1 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: var(--white);
-    border: 1px solid red;
+    margin-bottom: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #A3AED0; /* Gris bleuté doux */
 }
 
-/* Container principal du formulaire */
+/* Container du formulaire */
 .login-interaction {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espace entre les blocs email et mdp */
-    padding: 10px;
+    gap: 20px;
 }
 
+/* Groupes labels + inputs */
 .form-group {
     display: flex;
     flex-direction: column;
-    text-align: left; /* Aligne les labels à gauche */
+    text-align: left;
 }
 
-/* Style des labels (Email / Mot de passe) */
+/* Style des labels */
 .form-group label {
-    color: #a0a0c0; /* Gris-bleu clair */
-    font-size: 0.9rem;
+    color: #1B2559; /* Marine sombre */
+    font-size: 14px;
     margin-bottom: 8px;
-    font-weight: 500;
+    font-weight: 700; /* Plus gras pour le look pro */
 }
-/*////////////////////////////////////////////////////////////////////////////*/
+
 /* Style des champs de saisie (Inputs) */
 .form-group input {
-    background-color: rgba(255, 255, 255, 0.05); /* Fond très sombre et transparent */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure discrète */
-    border-radius: 8px;
-    padding: 12px 15px;
-    color: white;
-    font-size: 1rem;
-    transition: all 0.3s ease; /* Animation fluide */
+    background-color: #FFFFFF;
+    border: 1px solid #E0E5F2; /* Bordure grise discrète */
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: #1B2559;
+    font-size: 15px;
+    transition: all 0.2s ease;
     outline: none;
 }
 
-/* Effet quand on clique dans le champ (Focus) */
+/* Focus style Cobalt */
 .form-group input:focus {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: #3498db; /* Bleu plus vif pour montrer quel champ est actif */
-    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3); /* Légère lueur bleue */
+    border-color: #2D5BFF; /* Bleu Cobalt vif */
+    box-shadow: 0px 10px 20px rgba(45, 91, 255, 0.1);
 }
 
-/* Style du texte d'exemple (Placeholder) */
+/* Placeholder */
 .form-group input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: #A3AED0;
+    opacity: 0.6;
 }
-/*////////////////////////////////////////////////////////////////////////////*/
 
-
-
+/* Bouton de connexion Cobalt */
 .login-btn {
     width: 100%;
-    padding: 12px;
-    margin-top: 30px;
-    background: var(--accent-color);
+    padding: 16px;
+    margin-top: 10px;
+    background-color: #2D5BFF; /* Bleu Cobalt */
     border: none;
-    border-radius: 5px;
+    border-radius: 12px;
     color: white;
     font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s ease;
-    border: 1px solid red;
+    transition: all 0.3s ease;
 }
+
 .login-btn:hover {
-    background: #2980b9;
+    background-color: #2449CC; /* Bleu un peu plus sombre au hover */
+    box-shadow: 0px 10px 20px rgba(45, 91, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.login-btn:active {
+    transform: translateY(0);
 }
