@@ -156,39 +156,82 @@ body {
     overflow-y: auto;
 }
 
-@media (max-width: 900px) {
-    .sidebar {
-         content-visibility: hidden; 
-    }
 
-    /* Bonton pour cacher slide bar avec js */
-}
 
 /*///////////////////////////////////////////////////////////*/
 
-
-
-
-/* FOOTER */
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 15px;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7); /* Texte blanc légèrement transparent */
-    
-    /* Fond bleu très sombre et semi-transparent */
-    background-color: rgba(10, 10, 35, 0.8); 
-    /* Flou d'arrière-plan pour un effet premium */
-    backdrop-filter: blur(10px); 
-    
-    /* Bordure fine et discrète au lieu du gris #444 */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* =========================================
+   STYLE DU BOUTON BURGER (Caché sur PC)
+   ========================================= */
+.menu-toggle {
+    display: none; /* Caché par défaut sur ordi */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Pousse le bouton tout à droite */
 }
+
+/* Les 3 barres du burger */
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+/* =========================================
+   MEDIA QUERIES (TABLETTES & MOBILES)
+   ========================================= */
+@media (max-width: 900px) {
+
+    /* 1. Afficher le bouton menu */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* 2. Transformer la Sidebar en Menu Mobile */
+    .sidebar {
+        position: fixed;        /* Flotte au-dessus du contenu */
+        top: 60px;              /* Commence juste sous le header */
+        left: 0;
+        width: 100%;            /* Prend toute la largeur */
+        height: calc(100vh - 60px); /* Prend toute la hauteur restante */
+        background-color: #253d93;
+        z-index: 1000;          /* S'assure qu'il est au-dessus du reste */
+        
+        /* Animation : On le cache à gauche par défaut */
+        transform: translateX(-100%); 
+        transition: transform 0.3s ease-in-out;
+        
+        /* Centrer le contenu du menu (optionnel, plus joli sur mobile) */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 3. Classe activée par le Javascript */
+    .sidebar.active {
+        transform: translateX(0); /* On le ramène à sa place (visible) */
+    }
+
+    /* Ajustement des liens pour le mobile (plus gros pour les doigts) */
+    .sidebar-nav ul {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .sidebar-nav ul li a {
+        padding: 20px;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+
+
 
 
 

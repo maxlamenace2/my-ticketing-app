@@ -171,3 +171,72 @@
     background: #EE5D50;
     color: white;
 }
+
+/* =========================================
+   Responsive
+   ========================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* 1. Ajustements des marges globales */
+    .projects-list-main {
+        padding: 10px; /* Moins de marge sur les bords */
+    }
+
+    .my-tickets-list {
+        padding: 15px; /* Moins d'espace interne */
+    }
+
+    /* 2. Header (Titre + Bouton) empilés */
+    .ticket-list-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .projects-list-create-btn {
+        width: 100%;       /* Bouton pleine largeur */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* 3. LE TABLEAU : Cacher les colonnes inutiles */
+    /* ATTENTION : On utilise la classe .ticket-table-list (et pas .ticket-table)
+       
+       On veut GARDER :
+       - Col 2 : Project Name
+       - Col 3 : Title
+       - Col 5 : Priority
+       - Col 7 : Open
+       
+       On doit donc CACHER les autres : 1, 4, 6, 8.
+    */
+
+    /* ID (1), Status (4), Assigned To (6), Remove (8) -> CACHÉS */
+    .ticket-table-list th:nth-child(1), .ticket-table-list td:nth-child(1),
+    .ticket-table-list th:nth-child(4), .ticket-table-list td:nth-child(4),
+    .ticket-table-list th:nth-child(6), .ticket-table-list td:nth-child(6),
+    .ticket-table-list th:nth-child(8), .ticket-table-list td:nth-child(8) {
+        display: none;
+    }
+
+    /* 4. Débloquer la largeur du tableau */
+    .ticket-table-list {
+        min-width: auto; /* IMPORTANT : annule le blocage à 800px */
+        width: 100%;
+    }
+
+    /* Ajustement esthétique pour que ça rentre */
+    .ticket-table-list th, 
+    .ticket-table-list td {
+        padding: 12px 4px; /* Cellules plus compactes */
+        font-size: 13px;
+        white-space: normal; /* Permet au texte de passer à la ligne si besoin */
+    }
+    
+    /* Petit ajustement du bouton Open */
+    .ticket-open_btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+}

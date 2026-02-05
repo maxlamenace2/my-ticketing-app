@@ -1,34 +1,29 @@
-/* =========================================
-   PROJECT DETAIL PAGE - STYLE COBALT HARMONISÉ
-   ========================================= */
 
-/* --- CONFIGURATION GLOBALE DE LA PAGE --- */
-/* On cible le main pour appliquer le fond global */
 main {
     flex: 1;
     padding: 40px;
-    background-color: #F4F7FE; /* Fond gris bleuté harmonisé */
+    background-color: #F4F7FE; 
     min-height: 100vh;
     font-family: 'Segoe UI', 'Inter', sans-serif;
 }
 
 /* =========================================
-   SECTION 1 : INFO DU PROJET (CARTE DU HAUT)
+   SECTION 1
    ========================================= */
 .my-project-info {
     background: #FFFFFF;
-    border-radius: 20px; /* Arrondis modernes */
+    border-radius: 20px; 
     padding: 40px;
-    margin: 0 auto 30px auto; /* Centré avec marge en bas */
+    margin: 0 auto 30px auto; 
     max-width: 1400px;
-    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12); /* Ombre douce bleutée */
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12); 
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    border: none; /* Suppression de la bordure rouge */
+    border: none; 
 }
 
-/* --- COLONNE GAUCHE --- */
+
 .my-project-info-container-1 {
     flex: 2;
     display: flex;
@@ -36,48 +31,44 @@ main {
     gap: 25px;
 }
 
-/* Alignement des lignes (Label + Valeur + Edit) */
+
 .my-project-info-container-1 > div,
 .my-project-info-container-2-hours {
     display: flex;
     align-items: center;
     gap: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #F4F7FE; /* Ligne de séparation très légère */
+    border-bottom: 1px solid #F4F7FE; 
 }
 
-/* --- TYPOGRAPHIE INTELLIGENTE --- */
-/* Le 1er h1 est le Label (ex: "Nom :") */
+
 .my-project-info h1:first-child {
     font-size: 14px;
     font-weight: 500;
-    color: #A3AED0; /* Gris clair */
+    color: #A3AED0; 
     margin: 0;
-    min-width: 100px; /* Aligne les valeurs verticalement */
+    min-width: 100px; 
 }
 
-/* Le 2ème h1 est la Valeur (ex: "Premier Projet") */
 .my-project-info h1:nth-child(2) {
     font-size: 18px;
     font-weight: 700;
-    color: #1B2559; /* Bleu Marine Sombre */
+    color: #1B2559; 
     margin: 0;
 }
 
-/* Texte de description */
 .my-project-info p {
     margin: 0;
-    color: #707EAE; /* Gris moyen */
+    color: #707EAE; 
     font-size: 15px;
     line-height: 1.5;
 }
 
-/* --- BADGES COLLABORATEURS --- */
-/* Note : j'utilise ta classe avec la faute de frappe pour que ça marche */
+/*Badge colab*/
 .cololaborators-list {
     display: inline-block;
-    background-color: #EFF4FB; /* Fond bleu très pâle */
-    color: #2D5BFF; /* Texte Cobalt */
+    background-color: #EFF4FB; 
+    color: #2D5BFF; 
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 12px;
@@ -85,9 +76,9 @@ main {
     margin-right: 5px;
 }
 
-/* --- BOUTONS EDIT (btn tag) --- */
+/* bouton edit*/
 btn {
-    margin-left: auto; /* Pousse le bouton à droite */
+    margin-left: auto; 
     font-size: 11px;
     font-weight: 700;
     color: #2D5BFF;
@@ -104,7 +95,7 @@ btn:hover {
     text-decoration: underline;
 }
 
-/* --- COLONNE DROITE --- */
+
 .my-project-info-container-2 {
     flex: 1;
     display: flex;
@@ -112,7 +103,7 @@ btn:hover {
     justify-content: space-between;
 }
 
-/* Boutons de Contrat */
+
 .my-project-info-container-2-contract {
     display: flex;
     flex-direction: column;
@@ -121,7 +112,7 @@ btn:hover {
 }
 
 .my-project-info-button {
-    background-color: #2D5BFF; /* Bleu Cobalt */
+    background-color: #2D5BFF; 
     color: white;
     border: none;
     padding: 14px;
@@ -152,7 +143,7 @@ btn:hover {
     box-shadow: 0 10px 30px rgba(112, 144, 176, 0.12);
 }
 
-/* Header de la section Tickets */
+
 .projects-list-header {
     display: flex;
     justify-content: space-between;
@@ -169,7 +160,7 @@ btn:hover {
     margin: 0;
 }
 
-/* Bouton "New Ticket" */
+
 .projects-list-create-btn {
     background-color: #2D5BFF;
     color: white;
@@ -187,7 +178,7 @@ btn:hover {
     transform: translateY(-2px);
 }
 
-/* Sous-titre h2 */
+
 .my-project-tickets h2 {
     font-size: 16px;
     color: #A3AED0;
@@ -215,7 +206,7 @@ btn:hover {
     border-bottom: 1px solid #E0E5F2;
 }
 
-/* Corps */
+
 .ticket-table tbody tr {
     transition: background-color 0.2s;
     border-bottom: 1px solid #F4F7FE;
@@ -225,20 +216,20 @@ btn:hover {
     background-color: #F8F9FC;
 }
 
-/* Cellules */
+
 .ticket-table td {
     padding: 18px 20px;
-    color: #2B3674; /* Bleu foncé */
+    color: #2B3674; 
     font-size: 14px;
     font-weight: 600;
     vertical-align: middle;
 }
 
 .ticket-table td:first-child {
-    color: #2D5BFF; /* ID en bleu cobalt */
+    color: #2D5BFF; 
 }
 
-/* SELECT STATUS STYLE */
+
 .status-select {
     padding: 8px 12px;
     border: 1px solid #E0E5F2;
@@ -257,7 +248,6 @@ btn:hover {
     box-shadow: 0 0 0 2px rgba(45, 91, 255, 0.1);
 }
 
-/* BOUTONS D'ACTION DU TABLEAU */
 .project-open_btn {
     background: transparent;
     border: 1px solid #2D5BFF;
@@ -277,7 +267,7 @@ btn:hover {
 
 .project-remove_btn {
     background: transparent;
-    border: 1px solid #EE5D50; /* Rouge doux */
+    border: 1px solid #EE5D50; 
     color: #EE5D50;
     padding: 6px 16px;
     border-radius: 8px;
@@ -295,17 +285,67 @@ btn:hover {
 /* =========================================
    RESPONSIVE (MOBILE)
    ========================================= */
-@media (max-width: 900px) {
-    .my-project-info {
-        flex-direction: column;
-        gap: 30px;
-    }
+
+@media screen and (max-width: 900px) {
+
     
-    .my-project-info-container-1 > div {
-        flex-wrap: wrap;
+    main {
+        padding: 15px; 
     }
 
-    .my-project-tickets {
-        overflow-x: auto;
+    
+    .my-project-info {
+        flex-direction: column; 
+        padding: 20px;          
+        gap: 30px;
+    }
+
+
+    .my-project-info-container-1, 
+    .my-project-info-container-2 {
+        width: 100%;
+        flex: auto;
+    }
+
+  
+    .my-project-info-container-1 > div {
+        flex-wrap: wrap; 
+    }
+    
+    .my-project-info-container-2-contract {
+        margin-top: 0;
+    }
+
+
+    /* 3. Deuxième Tableau (Ticket List)  */
+    
+    /* On cache les colonnes : 3(Status), 4(Priority), 5(Assigned), 7(Remove) */
+    .ticket-table th:nth-child(3), .ticket-table td:nth-child(3),
+    .ticket-table th:nth-child(4), .ticket-table td:nth-child(4),
+    .ticket-table th:nth-child(5), .ticket-table td:nth-child(5),
+    .ticket-table th:nth-child(7), .ticket-table td:nth-child(7) {
+        display: none;
+    }
+
+    .ticket-table th, 
+    .ticket-table td {
+        padding: 12px 5px; 
+        font-size: 13px;   
+    }
+
+    .project-open_btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    
+    .projects-list-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .projects-list-create-btn {
+        width: 100%; 
+        text-align: center;
     }
 }
