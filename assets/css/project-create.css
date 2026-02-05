@@ -1,97 +1,75 @@
-/* =========================================
-   PROJECT CREATE PAGE - STYLE COBALT HARMONISÉ
-   ========================================= */
-
-/* --- LAYOUT PRINCIPAL --- */
 .project-create-main {
     flex: 1;
     padding: 40px;
-    background-color: #F4F7FE; /* Fond gris bleuté harmonisé */
+    background-color: #F4F7FE; 
     min-height: calc(100vh - 80px);
     display: flex;
-    justify-content: center; /* Centrage horizontal */
-    align-items: center;     /* Centrage vertical */
+    justify-content: center; 
+    align-items: center;     
     font-family: 'Segoe UI', 'Inter', sans-serif;
 }
 
 
-/* --- CARTE CONTENEUR --- */
 .project-create-section {
     background-color: #FFFFFF;
     padding: 40px;
-    border-radius: 20px; /* Arrondis modernes */
-    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); /* Ombre douce bleutée */
+    border-radius: 20px; 
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); 
     max-width: 600px;
     width: 100%;
     animation: fadeIn 0.5s ease-out;
 }
 
-/* Animation d'apparition */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Titre H1 */
 .project-create-section h1 {
-    color: #1B2559; /* Bleu marine sombre */
+    color: #1B2559; 
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 30px;
-    text-align: left; /* Aligné à gauche comme les autres pages */
+    text-align: left; 
 }
 
-/* --- FORMULAIRE --- */
 .project-create-form {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* L'espacement est géré par les marges des divs */
+    gap: 5px; 
 }
 
-/* Ciblage des classes spécifiques de ton HTML pour les traiter comme des groupes */
-.form-id, 
-.form-name, 
-.form-details, 
-.form-collaborators, 
-.project-create-form > div {
+.form-id, .form-name, .form-details, .form-collaborators, .project-create-form > div {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
 }
 
-/* Labels */
 label {
     font-size: 14px;
-    font-weight: 700; /* Gras pour le style pro */
-    color: #1B2559;   /* Bleu marine */
+    font-weight: 700; 
+    color: #1B2559;   
     margin-left: 4px;
 }
 
-/* Champs de saisie (Inputs & Textarea) */
+/*!!!!!!!!!!!!!!!!*/
 input[type="text"],
 textarea {
     padding: 14px 20px;
-    border: 1px solid #E0E5F2; /* Bordure grise subtile */
-    border-radius: 12px;       /* Arrondis */
+    border: 1px solid #E0E5F2; 
+    border-radius: 12px;      
     font-size: 15px;
     color: #1B2559;
     background-color: #FFFFFF;
     transition: all 0.2s ease;
     width: 100%;
-    box-sizing: border-box; /* Important pour ne pas dépasser */
+    box-sizing: border-box; 
 }
 
-/* Placeholder */
 input::placeholder, textarea::placeholder {
     color: #A3AED0;
 }
 
-/* État Focus (Clic) */
 input:focus, 
 textarea:focus {
     outline: none;
-    border-color: #2D5BFF; /* Bleu Cobalt */
+    border-color: #2D5BFF; 
     box-shadow: 0 0 0 4px rgba(45, 91, 255, 0.1);
 }
 
@@ -104,7 +82,7 @@ textarea {
 /* On cible le bouton peu importe où il est dans la div */
 .project-create-form button[type="submit"] {
     width: 100%;
-    background-color: #2D5BFF; /* Bleu Cobalt */
+    background-color: #2D5BFF; 
     color: white;
     border: none;
     padding: 16px;

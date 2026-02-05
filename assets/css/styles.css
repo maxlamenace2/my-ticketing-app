@@ -1,10 +1,8 @@
-/* =========================================
-   1. VARIABLES & RESET
-   ========================================= */
+
 :root {
-    --primary-color: #f1f6fb;    /* Bleu sombre sidebar */
-    --accent-color: #3498db;     /* Bleu boutons */
-    --bg-color: #000000;         /* Gris clair fond */
+    --primary-color: #f1f6fb;    
+    --accent-color: #3498db;     
+    --bg-color: #000000;         
     --text-color: #1B2559;
     --white: #ffffff;
 }
@@ -18,48 +16,19 @@
 body { 
     font-family: 'Segoe UI', sans-serif; 
     color: var(--text-color); 
-
-    /*background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);*/
     background-color:#F4F7FE;
-    /* Pour s'assurer que le dégradé prend tout l'écran */
     min-height: 100vh;
-    /*display: flex;*/
-
 }
 
-/* =========================================
-   2. LAYOUT GLOBAL (Sidebar + Main)'
-   ========================================= */
-/*.app-container { display: flex; min-height: 100vh; }
 
-.sidebar {
-    width: 250px;
-    background: var(--primary-color);
-    color: white;
-    padding: 20px;
-}
-
-.main-content {
-    flex-grow: 1;
-    padding: 30px;
-}*/
-
-/* =========================================
-   3. COMPOSANTS RÉUTILISABLES (Tableaux, Boutons, Cards)
-   ========================================= */
-/*.card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.btn { padding: 10px 20px; border-radius: 5px; cursor: pointer; text-decoration: none; display: inline-block; }
-.btn-primary { background: var(--accent-color); color: white; border: none; }*/
-
-/* On utilise .header car c'est la classe dans ton HTML */
 .header {
-    background-color: #253d93; /* Ton bleu sombre */
+    background-color: #253d93; 
     display: flex;
     justify-content: flex-start; /* Aligne le logo à gauche */
     align-items: center;
     padding: 0 20px;
     height: 60px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Plus joli qu'une bordure rouge */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
 .logo {
@@ -76,55 +45,19 @@ body {
     object-fit: contain;
 }
 
-/* Style de la navigation */
-.header-nav nav ul {
-    display: flex;       /* Aligne les <li> horizontalement */
-    list-style: none;    /* Enlève les points blancs */
-    gap: 25px;           /* Espace entre les liens */
-    margin: 0;
-    padding: 0;
-    border: 1px solid red;
-}
-
-.header-nav a {
-    text-decoration: none;
-    color: rgb(203, 169, 169);
-    font-weight: 500;
-    transition: 0.3s;
-    border: 1px solid red;
-}
-
-.header-nav a:hover {
-    color: #3498db;
-    transform: scale(1.02);
-    transition: transform 0.3s ease;
-}
-
-
-/* LA CLASSE ACTIVE pour afficher ou on est dans la nav */
-.header-nav ul li a.active {
-    color: #3498db !important; 
-    font-weight: 700;         
-    border-bottom: 2px solid #3498db; 
-}
-
-
-
-
-/*//////////////////////////////////////////////////////////////////*/
 
 /* SLIDEBAR */
 .app-container {
     display: flex; /* Aligne la sidebar et le main côte à côte */
-    min-height: calc(100vh - 60px); /* Prend toute la hauteur moins le header */
+    min-height: calc(100vh - 60px); /*hauteur - header pour laisser place au logo*/
 }
 
-/* Style de la Sidebar */
+
 .sidebar {
     width: 13%;
-    background-color:#253d93; /* Couleur sombre comme l'exemple Logmore */
+    background-color:#253d93; 
     padding-top: 20px;
-    flex-shrink: 0; /* Empêche la sidebar de rétrécir */
+    flex-shrink: 0; 
 }
 
 .sidebar-nav ul {
@@ -140,38 +73,32 @@ body {
     transition: 0.3s;
 }
 
-.sidebar-nav ul li a:hover, 
-.sidebar-nav ul li a.active {
+.sidebar-nav ul li a:hover, .sidebar-nav ul li a.active {
     background-color: #34495e;
     color: #3498db;
-    border-left: 4px solid #3498db; /* Petit trait bleu à gauche */
+    border-left: 4px solid #3498db; 
 }
 
-/* Ajustement du contenu principal */
 .dashboard-main {
-    flex-grow: 1; /* Prend tout l'espace restant */
-    display: flex; /* Garde vos 3 colonnes de cartes */
+    flex-grow: 1; 
+    display: flex; 
     padding: 20px;
     gap: 20px;
     overflow-y: auto;
 }
 
 
-
-/*///////////////////////////////////////////////////////////*/
-
 /* =========================================
-   STYLE DU BOUTON BURGER (Caché sur PC)
+   BOUTON BURGER
    ========================================= */
 .menu-toggle {
-    display: none; /* Caché par défaut sur ordi */
+    display: none; /* Caché sur ordi*/
     background: transparent;
     border: none;
     cursor: pointer;
-    margin-left: auto; /* Pousse le bouton tout à droite */
+    margin-left: auto; /*bonton a droite*/
 }
 
-/* Les 3 barres du burger */
 .menu-toggle span {
     display: block;
     width: 25px;
@@ -182,41 +109,38 @@ body {
 }
 
 /* =========================================
-   MEDIA QUERIES (TABLETTES & MOBILES)
+   responsive
    ========================================= */
 @media (max-width: 900px) {
 
-    /* 1. Afficher le bouton menu */
     .menu-toggle {
         display: block;
     }
 
-    /* 2. Transformer la Sidebar en Menu Mobile */
     .sidebar {
-        position: fixed;        /* Flotte au-dessus du contenu */
-        top: 60px;              /* Commence juste sous le header */
+        position: fixed;        
+        top: 60px;              
         left: 0;
-        width: 100%;            /* Prend toute la largeur */
-        height: calc(100vh - 60px); /* Prend toute la hauteur restante */
+        width: 100%;            
+        height: calc(100vh - 60px); 
         background-color: #253d93;
-        z-index: 1000;          /* S'assure qu'il est au-dessus du reste */
+        z-index: 1000; /*au dessus du reste*/
         
-        /* Animation : On le cache à gauche par défaut */
+        
         transform: translateX(-100%); 
         transition: transform 0.3s ease-in-out;
         
-        /* Centrer le contenu du menu (optionnel, plus joli sur mobile) */
+        
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* 3. Classe activée par le Javascript */
+    
     .sidebar.active {
-        transform: translateX(0); /* On le ramène à sa place (visible) */
+        transform: translateX(0);
     }
 
-    /* Ajustement des liens pour le mobile (plus gros pour les doigts) */
     .sidebar-nav ul {
         width: 100%;
         text-align: center;

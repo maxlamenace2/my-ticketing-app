@@ -1,45 +1,45 @@
 
 
-/* --- LAYOUT PRINCIPAL --- */
+
 .projects-list-main {
     flex: 1;
     padding: 40px;
-    background-color: #F4F7FE; /* Fond gris bleuté harmonisé */
+    background-color: #F4F7FE; 
     min-height: 100vh;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* --- CARTE CONTENEUR (Style Behance) --- */
+
 .projects-list-section {
     background: #FFFFFF;
-    border-radius: 20px; /* Arrondis modernes */
+    border-radius: 20px; 
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.1); /* Ombre douce bleutée */
+    box-shadow: 0 10px 30px rgba(112, 144, 176, 0.1); 
     max-width: 1400px;
     margin: 0 auto;
 }
 
-/* --- HEADER DE LA LISTE --- */
+
 .projects-list-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #E0E5F2; /* Ligne de séparation subtile */
+    border-bottom: 1px solid #E0E5F2; 
 }
 
 .projects-list-title {
     font-size: 24px;
     font-weight: 700;
-    color: #1B2559; /* Bleu marine sombre */
+    color: #1B2559; 
     margin: 0;
-    font-family: 'Segoe UI', sans-serif; /* On garde une police pro */
+    font-family: 'Segoe UI', sans-serif; 
 }
 
 /* Bouton "Create New Project" */
 .projects-list-create-btn {
-    background-color: #2D5BFF; /* Bleu Cobalt */
+    background-color: #2D5BFF; 
     color: white;
     padding: 12px 24px;
     border-radius: 12px;
@@ -56,9 +56,9 @@
     box-shadow: 0 6px 15px rgba(45, 91, 255, 0.3);
 }
 
-/* --- TABLEAU (Inspiré de ton fichier d'exemple) --- */
+
 .table-container {
-    overflow-x: auto; /* Permet le scroll horizontal si l'écran est petit */
+    overflow-x: auto; /* pour permttre la srcoll horizontal si écran petit*/
 }
 
 .ticket-table {
@@ -67,51 +67,46 @@
     border-spacing: 0;
 }
 
-/* En-têtes du tableau */
 .ticket-table thead th {
     text-align: left;
     padding: 15px 20px;
     font-size: 12px;
-    color: #A3AED0; /* Gris clair moderne */
+    color: #A3AED0; 
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #E0E5F2;
 }
 
-/* Lignes du tableau */
 .ticket-table tbody tr {
     transition: all 0.2s ease;
 }
 
 .ticket-table tbody tr:hover {
-    background-color: #F8F9FC; /* Effet de survol très léger */
+    background-color: #F8F9FC; 
 }
 
-/* Cellules */
 .ticket-table td {
     padding: 20px;
     border-bottom: 1px solid #F4F7FE;
-    color: #2B3674; /* Bleu foncé pour le texte */
+    color: #2B3674; 
     font-size: 14px;
     font-weight: 600;
     vertical-align: middle;
 }
 
-/* Détails (texte plus léger) */
 .ticket-table td p {
     margin: 0;
     color: #707EAE;
     font-weight: 400;
     font-size: 13px;
-    max-width: 300px; /* Évite que le texte ne soit trop long */
+    max-width: 300px; 
 }
 
-/* --- BADGES COLLABORATEURS --- */
 .collaborator-badge {
     display: inline-block;
-    background-color: #EFF4FB; /* Fond très clair */
-    color: #2D5BFF; /* Texte bleu cobalt */
+    background-color: #EFF4FB; 
+    color: #2D5BFF; 
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 11px;
@@ -121,7 +116,6 @@
     border: 1px solid #E0E5F2;
 }
 
-/* --- BOUTON OPEN --- */
 .project-open_btn {
     display: inline-block;
     color: #2D5BFF;

@@ -7,9 +7,7 @@ main {
     font-family: 'Segoe UI', 'Inter', sans-serif;
 }
 
-/* =========================================
-   SECTION 1
-   ========================================= */
+/*top*/
 .my-project-info {
     background: #FFFFFF;
     border-radius: 20px; 
@@ -32,8 +30,7 @@ main {
 }
 
 
-.my-project-info-container-1 > div,
-.my-project-info-container-2-hours {
+.my-project-info-container-1 > div, .my-project-info-container-2-hours {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -119,7 +116,7 @@ btn:hover {
     border-radius: 12px;
     font-size: 14px;
     font-weight: 600;
-    cursor: pointer;
+    cursor: pointer;/*!!!!!*/
     transition: all 0.3s ease;
     width: 100%;
     box-shadow: 0 4px 10px rgba(45, 91, 255, 0.2);
@@ -132,7 +129,7 @@ btn:hover {
 }
 
 /* =========================================
-   SECTION 2 : TICKETS (CARTE DU BAS)
+   Ticket du projet
    ========================================= */
 .my-project-tickets {
     background: #FFFFFF;
@@ -159,7 +156,6 @@ btn:hover {
     color: #1B2559;
     margin: 0;
 }
-
 
 .projects-list-create-btn {
     background-color: #2D5BFF;
@@ -206,7 +202,6 @@ btn:hover {
     border-bottom: 1px solid #E0E5F2;
 }
 
-
 .ticket-table tbody tr {
     transition: background-color 0.2s;
     border-bottom: 1px solid #F4F7FE;
@@ -215,7 +210,6 @@ btn:hover {
 .ticket-table tbody tr:hover {
     background-color: #F8F9FC;
 }
-
 
 .ticket-table td {
     padding: 18px 20px;
@@ -228,7 +222,6 @@ btn:hover {
 .ticket-table td:first-child {
     color: #2D5BFF; 
 }
-
 
 .status-select {
     padding: 8px 12px;
@@ -283,23 +276,20 @@ btn:hover {
 }
 
 /* =========================================
-   RESPONSIVE (MOBILE)
+   Responsive
    ========================================= */
 
 @media screen and (max-width: 900px) {
 
-    
     main {
         padding: 15px; 
     }
 
-    
     .my-project-info {
         flex-direction: column; 
         padding: 20px;          
         gap: 30px;
     }
-
 
     .my-project-info-container-1, 
     .my-project-info-container-2 {
@@ -307,7 +297,6 @@ btn:hover {
         flex: auto;
     }
 
-  
     .my-project-info-container-1 > div {
         flex-wrap: wrap; 
     }
@@ -319,7 +308,7 @@ btn:hover {
 
     /* 3. Deuxième Tableau (Ticket List)  */
     
-    /* On cache les colonnes : 3(Status), 4(Priority), 5(Assigned), 7(Remove) */
+    /* cache les colonnes*/
     .ticket-table th:nth-child(3), .ticket-table td:nth-child(3),
     .ticket-table th:nth-child(4), .ticket-table td:nth-child(4),
     .ticket-table th:nth-child(5), .ticket-table td:nth-child(5),
@@ -341,7 +330,7 @@ btn:hover {
     .projects-list-header {
         flex-direction: column;
         gap: 15px;
-        align-items: flex-start;
+        align-items: flex-start; /* pour aligné coté*/
     }
     
     .projects-list-create-btn {

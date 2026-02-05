@@ -1,65 +1,49 @@
-/* Container principal pour le centrage parfait */
+
 .ticket-create-main {
     flex: 1;
     padding: 40px;
-    background-color: #F4F7FE; /* Fond gris bleuté clair style Behance */
+    background-color: #F4F7FE; 
     display: flex;
-    justify-content: center; /* Centrage horizontal */
-    align-items: center;     /* Centrage vertical */
+    justify-content: center; 
+    align-items: center;     
     min-height: calc(100vh - 70px); 
 }
 
-/* La carte du formulaire */
 .ticket-create-section {
     background-color: #FFFFFF;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); /* Ombre douce pro */
-    max-width: 700px; /* J'ai élargi un peu (600->700) pour accomoder les 2 colonnes */
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12); 
+    max-width: 700px; 
     width: 100%;
     animation: fadeIn 0.5s ease-out;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .ticket-create-section h1 {
-    color: #1B2559; /* Bleu marine sombre */
+    color: #1B2559; 
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 30px;
     text-align: left;
 }
 
-/* Formulaire */
 .ticket-create-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* --- NOUVEAU : GESTION DES LIGNES (2 colonnes) --- */
 .form-row {
     display: flex;
     gap: 20px;
     width: 100%;
 }
 
-/* Sur mobile, on repasse en colonne unique */
-@media (max-width: 600px) {
-    .form-row {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
 .form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1; /* Permet aux champs de prendre toute la place disponible dans la ligne */
+    flex: 1; 
 }
 
 label {
@@ -69,7 +53,6 @@ label {
     margin-left: 4px;
 }
 
-/* Inputs, Select et Textarea */
 input[type="text"],
 select,
 textarea {
@@ -80,14 +63,13 @@ textarea {
     color: #1B2559;
     background-color: #FFFFFF;
     transition: all 0.2s ease;
-    width: 100%; /* Important pour remplir le parent */
+    width: 100%; 
 }
 
 input::placeholder, textarea::placeholder {
     color: #A3AED0;
 }
 
-/* Effet focus Cobalt */
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #2D5BFF;
@@ -99,7 +81,6 @@ textarea {
     resize: vertical;
 }
 
-/* Bouton Cobalt stylisé */
 .form-btn-container {
     margin-top: 10px;
 }
@@ -125,4 +106,15 @@ textarea {
 
 .submit-btn:active {
     transform: translateY(0);
+}
+
+/*
+ responsive
+ */
+
+ @media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
