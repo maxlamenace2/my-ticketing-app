@@ -23,7 +23,6 @@
     box-sizing: border-box;  
 }
 
-
 .ticket-list-header {
     display: flex;
     justify-content: space-between;
