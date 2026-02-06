@@ -66,8 +66,7 @@ input::placeholder, textarea::placeholder {
     color: #A3AED0;
 }
 
-input:focus, 
-textarea:focus {
+input:focus, textarea:focus {
     outline: none;
     border-color: #2D5BFF; 
     box-shadow: 0 0 0 4px rgba(45, 91, 255, 0.1);
@@ -76,6 +75,19 @@ textarea:focus {
 textarea {
     min-height: 120px;
     resize: vertical;
+}
+
+
+/*ERREUR*/
+.error-text {
+    background-color: rgb(211, 125, 125);
+    color:#FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
 
 /* --- BOUTON DE SOUMISSION --- */

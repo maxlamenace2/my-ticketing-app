@@ -40,22 +40,27 @@
         <main class="project-create-main">
             <section class = "project-create-section">
                 <h1>Create a new Project</h1>
-                <form class = "project-create-form">
+                <form id ="projects-create-form" class = "project-create-form" action = "" method="post">
                     <div class="form-id">
                         <label for="project-id">Project id:</label>
-                        <input type="text" id="project-id" name="project-id" required>
+                        <input id="projectId" type="text" id="project-id" name="project-id">
+                        <div id="project-id-error-void" class="error-text hidden">Le id du projet est obligatoire.</div>
+                        <div id="project-id-error-number" class="error-text hidden">Le id du projet doit que contenir des nombres sans espaces</div>
                     </div>
                     <div class="form-name">
                         <label for="project-name">Project Name:</label>
-                        <input type="text" id="project-name" name="project-name" required>
+                        <input id= "projectName"type="text" id="project-name" name="project-name">
+                        <div id="project-name-error-void" class="error-text hidden">Le nom du projet est obligatoire.</div>   
                     </div>
                     <div class="form-details">
                         <label for="project-details">Project Details:</label>
-                        <textarea id="project-details" name="project-details" required></textarea>
+                        <textarea id="projectDetail" name="project-details"></textarea>
+                        <div id="project-detail-error-void" class="error-text hidden">le detail du projet est obligatoire</div>
                     </div>
                     <div class="form-collaborators">
                         <label for="collaborators">Collaborators (comma separated):</label>
-                        <input type="text" id="collaborators" name="collaborators">
+                        <input id = "projectCollaborators" type="text" id="collaborators" name="collaborators">
+                        <div id="project-collaborators-error-void" class="error-text hidden">les collaborateurs du projet sont obligatoires</div>
                     </div>
                     <div class = "form-btn"></div>
                         <button type="submit">Create Project</button>
@@ -66,6 +71,7 @@
     </div>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/project_create.js"></script>
     
 </body>
 </html>

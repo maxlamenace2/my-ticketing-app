@@ -126,10 +126,8 @@ body {
         background-color: #253d93;
         z-index: 1000; /*au dessus du reste*/
         
-        
         transform: translateX(-100%); 
         transition: transform 0.3s ease-in-out;
-        
         
         display: flex;
         flex-direction: column;
