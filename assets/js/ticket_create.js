@@ -1,76 +1,43 @@
 function check_id() {
     // On veut vérifier les champs du formulaire
-    const id = document.querySelector('#projectId');
+    const id = document.querySelector('#ticketId');
     // .value récupère la valeur d'un input
     console.log("id : ", id.value);
 
-    const project_id_error_void = document.querySelector('#project-id-error-void');
-    const project_id_error_number = document.querySelector('#project-id-error-number');
+    const ticket_id_error_void = document.querySelector('#ticket-id-error-void');
+    const ticket_id_error_number = document.querySelector('#ticket-id-error-number');
     if(id.value == "") {
-        project_id_error_void.classList.remove('hidden');
+        ticket_id_error_void.classList.remove('hidden');
         return 1;
     } else {
-        project_id_error_void.classList.add('hidden');
+        ticket_id_error_void.classList.add('hidden');
         // ^ = debut de chaine d = digit $ = fin de chaine
         if (!(/^\d+$/.test(id.value))) {
             console.log("Il y a pas que des chiffres");
-            project_id_error_number.classList.remove('hidden');
+            ticket_id_error_number.classList.remove('hidden');
             return 1;
         } else {
             console.log("il y a que des chiffres");
-            project_id_error_number.classList.add('hidden');
+            ticket_id_error_number.classList.add('hidden');
             return 0;
         }
     }
 }
 
+
 function check_name() {
     console.log('on fait le check name');
 
-    const name = document.querySelector('#projectName');
+    const name = document.querySelector('#ticketName');
     // .value récupère la valeur d'un input
     console.log("name : ", name.value);
 
-    const project_name_error_void = document.querySelector('#project-name-error-void');
+    const ticket_name_error_void = document.querySelector('#ticket-name-error-void');
     if(name.value == "") {
-        project_name_error_void.classList.remove('hidden');
+        ticket_name_error_void.classList.remove('hidden');
         return 1;
     } else {
-        project_name_error_void.classList.add('hidden');
-        return 0;
-    }
-}
-
-function check_detail() {
-    console.log('on fait le check detail');
-
-    const detail = document.querySelector('#projectDetail');
-    // .value récupère la valeur d'un input
-    console.log("name : ", detail.value);
-
-    const project_detail_error_void = document.querySelector('#project-detail-error-void');
-    if(detail.value == "") {
-        project_detail_error_void.classList.remove('hidden');
-        return 1;
-    } else {
-        project_detail_error_void.classList.add('hidden');
-        return 0;
-    }
-}
-
-function check_collaborators() {
-    console.log('on fait le check collaborator');
-
-    const collaborators = document.querySelector('#projectCollaborators');
-    // .value récupère la valeur d'un input
-    console.log("name : ", collaborators.value);
-
-    const project_collaborator_error_void = document.querySelector('#project-collaborators-error-void');
-    if(collaborators.value == "") {
-        project_collaborator_error_void.classList.remove('hidden');
-        return 1;
-    } else {
-        project_collaborator_error_void.classList.add('hidden');
+        ticket_name_error_void.classList.add('hidden');
         return 0;
     }
 }
@@ -80,11 +47,11 @@ function check_collaborators() {
 
 
 // sélection du form #submitform
-const f = document.querySelector('#projects-create-form');
+const Ticketform = document.querySelector('#tickets_create_form');
 
 
 // je crée un écouteur d'événement pour gérer la soumission du form
-f.addEventListener("submit", function(event) {
+Ticketform.addEventListener("submit", function(event) {
     // on empeche la soumission du formulaire
     // pour éviter le rechargement de page
     event.preventDefault();
@@ -97,7 +64,7 @@ f.addEventListener("submit", function(event) {
     console.log('chck id fait');
     nb_errors += check_name();
 
-    nb_errors += check_detail();
+    /*nb_errors += check_detail();
 
     nb_errors += check_collaborators();
 
@@ -129,5 +96,5 @@ f.addEventListener("submit", function(event) {
             toast.classList.add('hidden');
             console.log("fichier crer hidden");
         }, 5000);
-    }
+    }*/
 });

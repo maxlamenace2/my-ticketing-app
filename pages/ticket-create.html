@@ -40,17 +40,19 @@
         <main class="ticket-create-main">
             <section class="ticket-create-section">
                 <h1>Create a new Ticket</h1>
-                <form class="ticket-create-form">
+                <form id = "tickets_create_form"class="ticket-create-form">
                     
                     <div class="form-row">
                         <div class="form-group">
                             <label for="project-id">ID</label>
-                            <input type="text" id="project-id" name="project-id" placeholder="Ex: T-101" required>
+                            <input id = "ticketId" type="text" id="project-id" name="project-id" placeholder="Ex: T-101">
+                            <div id="ticket-id-error-void" class="error-text hidden">Le id du projet est obligatoire.</div>
+                            <div id="ticket-id-error-number" class="error-text hidden">Le id du projet doit que contenir des nombres sans espaces</div>
                         </div>
 
                         <div class="form-group">
                             <label for="project-select">Associated Project</label>
-                            <select id="project-select" name="project-select" required>
+                            <select id="project-select" name="project-select">
                                 <option value="">-- Select --</option>
                                 <option value="1">Alpha Project</option>
                                 <option value="2">Beta Project</option>
@@ -60,7 +62,8 @@
 
                     <div class="form-group">
                         <label for="project-name">Title</label>
-                        <input type="text" id="project-name" name="project-name" placeholder="Enter ticket title" required>
+                        <input id="ticketName" type="text" id="project-name" name="project-name" placeholder="Enter ticket title">
+                        <div id="ticket-name-error-void" class="error-text hidden">Le titre du ticket est obligatoire</div>
                     </div>
 
                     <div class="form-row">
@@ -106,7 +109,7 @@
 
                     <div class="form-group">
                         <label for="project-details">Description</label>
-                        <textarea id="project-details" name="project-details" placeholder="Describe the details..." required></textarea>
+                        <textarea id="project-details" name="project-details" placeholder="Describe the details..."></textarea>
                     </div>
 
                     <div class="form-group">
@@ -123,5 +126,6 @@
     </div>
 
     <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/ticket_create.js"></script>
 </body>
 </html>
