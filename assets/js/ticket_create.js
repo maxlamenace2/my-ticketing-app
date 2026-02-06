@@ -42,6 +42,80 @@ function check_name() {
     }
 }
 
+function check_time() {
+    console.log('on fait le check time');
+
+    const time = document.querySelector('#ticketTime');
+    // .value récupère la valeur d'un input
+    console.log("time : ", time.value);
+
+    const ticket_time_error_void = document.querySelector('#ticket-time-error-void');
+    const ticket_time_error_format = document.querySelector('#ticket-time-error-format');
+    if(time.value == "") {
+        ticket_time_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        ticket_time_error_void.classList.add('hidden'); 
+
+
+        const regexFormat = /^\d+h \d+m$/;//!!!!!!!!!!!!!!!!!!!
+        if (regexFormat.test(time.value) == false) {
+            ticket_time_error_format.classList.remove('hidden');
+            console.log("here");
+            return 1;
+        }
+        else {
+            ticket_time_error_format.classList.add('hidden');
+            return 0;
+        }
+    } 
+}
+
+function check_Description() {
+
+    const description = document.querySelector('#ticket-details');
+    // .value récupère la valeur d'un input
+    console.log("description : ", description.value);
+
+    const ticket_description_error_void = document.querySelector('#ticket-description-error-void');
+    if(description.value == "") {
+        ticket_description_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        ticket_description_error_void.classList.add('hidden');
+        return 0;
+    }
+}
+
+function check_collaborators() {
+    const collaborators = document.querySelector('#ticketCollaborator');
+    
+    const ticket_collaborators_error_void = document.querySelector('#ticket-collaborator-error-void');
+    const ticket_collaborator_error_format = document.querySelector('#ticket-collaborator-error-format');
+    if(collaborators.value == "") {
+        ticket_collaborators_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        ticket_collaborators_error_void.classList.add('hidden');
+        
+        // Regex explicative :
+        // ^                    : Début
+        // [a-zA-ZÀ-ÿ\s-]+      : Un nom (Lettres, Accents, Espaces, Tirets)
+        // (,\s*[a-zA-ZÀ-ÿ\s-]+)* : Un groupe répété (Virgule + Espace optionnel + Autre nom)
+        // $                    : Fin
+        const regexFormat = /^[a-zA-ZÀ-ÿ\s-]+(,\s*[a-zA-ZÀ-ÿ\s-]+)*$/;
+        if (regexFormat.test(collaborators.value) == false) {
+            ticket_collaborator_error_format.classList.remove('hidden');
+            console.log("hello");
+            return 1;
+        }
+        else {
+            ticket_collaborator_error_format.classList.add('hidden');
+            return 0;
+        }
+    }
+}
+
 
 
 
@@ -59,26 +133,25 @@ Ticketform.addEventListener("submit", function(event) {
 
     
     let nb_errors = 0;
-    nb_errors += check_id();
+    nb_errors = check_id();
 
     console.log('chck id fait');
-    nb_errors += check_name();
+    nb_errors = check_name();
 
-    /*nb_errors += check_detail();
+    nb_errors = check_time();
 
-    nb_errors += check_collaborators();
+    nb_errors = check_Description();
 
-
+    nb_errors = check_collaborators();
     
-    console.log("nb_errors : ", nb_errors);
-
     
     if(nb_errors == 0) {
         // Je vais ajouter la ligne dans mon tableau
-        const a = document.querySelector('#projectId');
-        const b = document.querySelector('#projectName');
-        const c = document.querySelector('#projectDetail');
-        const d = document.querySelector('#projectCollaborators');
+        const a = document.querySelector('#ticketId');
+        const b = document.querySelector('#ticketName');
+        const c = document.querySelector('#ticketTime');
+        const d = document.querySelector('#ticket-details');
+        const e = document.querySelector('#ticketCollaborator');
 
     
         // Je vide le formulaire
@@ -86,6 +159,7 @@ Ticketform.addEventListener("submit", function(event) {
         b.value = "";
         c.value = "";
         d.value = "";
+        e.value = "";
 
         // J'affiche le "toast"
         const toast = document.querySelector("#success");
@@ -96,5 +170,5 @@ Ticketform.addEventListener("submit", function(event) {
             toast.classList.add('hidden');
             console.log("fichier crer hidden");
         }, 5000);
-    }*/
+    }
 });

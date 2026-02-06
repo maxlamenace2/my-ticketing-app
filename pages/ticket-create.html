@@ -52,7 +52,7 @@
 
                         <div class="form-group">
                             <label for="project-select">Associated Project</label>
-                            <select id="project-select" name="project-select">
+                            <select id="project-select" name="project-select" required>
                                 <option value="">-- Select --</option>
                                 <option value="1">Alpha Project</option>
                                 <option value="2">Beta Project</option>
@@ -83,7 +83,7 @@
 
                         <div class="form-group">
                             <label for="ticket-priority">Priority</label>
-                            <select id="ticket-priority" name="ticket-priority">
+                            <select id="ticket-priority" name="ticket-priority" required>
                                 <option value="">-- None --</option>
                                 <option value="low">Low</option>
                                 <option value="medium">Medium</option>
@@ -103,24 +103,32 @@
 
                         <div class="form-group">
                             <label for="real-time">Real Time Spent</label>
-                            <input type="text" id="real-time" name="real-time" placeholder="Ex: 2h 30m">
+                            <input id = "ticketTime" type="text" id="real-time" name="real-time" placeholder="Ex: 2h 30m">
+                            <div id="ticket-time-error-void" class="error-text hidden">Les heures sont obligatoires</div>
+                            <div id="ticket-time-error-format" class="error-text hidden">Mauvais format : Format demandé : ..h ..m</div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="project-details">Description</label>
-                        <textarea id="project-details" name="project-details" placeholder="Describe the details..."></textarea>
+                        <label for="ticket-details">Description</label>
+                        <textarea id="ticket-details" name="project-details" placeholder="Describe the details..."></textarea>
+                        <div id="ticket-description-error-void" class="error-text hidden">La Description est obligatoires</div>
                     </div>
 
                     <div class="form-group">
                         <label for="collaborators">Collaborators</label>
-                        <input type="text" id="collaborators" name="collaborators" placeholder="Jean, Marie, Marc...">
+                        <input id = "ticketCollaborator" type="text" id="collaborators" name="collaborators" placeholder="Jean, Marie, Marc...">
+                        <div id="ticket-collaborator-error-void" class="error-text hidden">Les Collaborateurs sont obligatoires</div>
+                        <div id="ticket-collaborator-error-format" class="error-text hidden">Mauvais format : Format demandé : Collaborator, Collaborator , ...</div>
                     </div>
 
                     <div class="form-btn-container">
                         <button type="submit" class="submit-btn">Create Ticket</button>
                     </div>
                 </form>
+                <div id="success" class="success hidden">
+                    <h4>Ticket created</h4>
+                </div>
             </section>
         </main>
     </div>
