@@ -140,5 +140,5 @@ f.addEventListener("submit", function(event) {
         setTimeout(() => {
             toast.classList.add('titanic');
         }, 5000);
-    }*/
+    }
 });
