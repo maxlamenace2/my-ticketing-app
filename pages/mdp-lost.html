@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Step_one_tp</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/mdp-lost.css">
 </head>
 
 <body class = "login-page">
@@ -24,11 +24,11 @@
 
     <div class="login-conection">
         <div class = "login-text1">
-            <p>Veuillez vous connecter pour accéder à vos tickets</p>
+            <p>Veuillez entrer votre adresse mail, un email vous sera envoyé pour changer votre mot de passe</p>
         </div>
             
         
-            <form action="pages/dashboard.html" method="GET">
+            <form action="" method="GET">
                 <div class="login-interaction">
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -36,19 +36,11 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <label for="email">Confirmer votre adresse email</label>
+                        <input type="email" id="email" name="email" placeholder="nom@exemple.com" required>
                     </div>
                 </div>
-                <div class = "mdp-forgot">
-                    
-                        <a class = "mdp-lost" href="pages/mdp-lost.html">mot de passe oublié ?</a>
-                    
-                   
-                        <a class = "inscription" href = "pages/inscription.html">inscription ?</a>
-                    
-                </div>
-                <button type="submit" class="login-btn" >Se connecter</button>
+                <button type="submit" class="login-btn" >Changer mot de passe</button>
             </form>
         </div>
     

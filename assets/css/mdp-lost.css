@@ -85,34 +85,6 @@ body {
     opacity: 0.6;
 }
 
-.mdp-forgot {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 15px; 
-}
-
-.mdp-lost {
-    color: #8F9BBA; 
-    text-decoration: none; /* Pas de soulignement moche */
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.inscription{
-    color: #8F9BBA; 
-    text-decoration: none; /* Pas de soulignement moche */
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.mdp-lost:hover {
-    color: #3498db; /* Devient bleu clair au survol */
-    text-decoration: underline; /* Souligne pour confirmer que c'est un lien */
-}
-
 
 .login-btn {
     width: 100%;
