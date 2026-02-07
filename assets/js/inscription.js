@@ -46,6 +46,84 @@ function check_surname() {
     }
 }
 
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+function check_email() {
+            
+    
+    const email = document.querySelector('#InscriptionEmail');
+    
+    const inscription_email_error_void = document.querySelector('#inscription-email-error-void');
+    const inscription_email_error_letter = document.querySelector('#inscription-email-error-letter');
+    const inscription_email_error_ars = document.querySelector('#inscription-email-error-ars');
+    if(email.value == "") {
+        inscription_email_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        inscription_email_error_void.classList.add('hidden');
+        
+        if (email.value.length <= 2) {
+            inscription_email_error_letter.classList.remove('hidden');
+            return 1;
+        }
+        else {
+            inscription_email_error_letter.classList.add('hidden');
+            if (!validateEmail(email.value)) {
+                inscription_email_error_ars.classList.remove('hidden');
+                return 1;
+            } else {
+                inscription_email_error_ars.classList.add('hidden');
+                return 0;
+            }
+        }
+    }
+}
+
+
+function check_date() {
+
+    const date = document.querySelector('#InscriptionDate');
+    
+    const inscription_date_error_void = document.querySelector('#inscription-date-error-void');
+    const inscription_date_error_old = document.querySelector('#inscription-date-error-old');
+    if(date.value == "") {
+        inscription_date_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        inscription_date_error_void.classList.add('hidden');
+        
+        // On convertit la valeur de l'input en objet Date
+        const birthDate = new Date(date.value);
+        const today = new Date();
+
+        // Calcul de l'âge brut (Année actuelle - Année de naissance)
+        let age = today.getFullYear() - birthDate.getFullYear();
+
+        // Ajustement : Est-ce que son anniversaire est déjà passé cette année ?
+        // m = différence de mois
+        const m = today.getMonth() - birthDate.getMonth();
+
+        // Si on est avant le mois de l'anniv (m < 0) 
+        // OU si on est le mois de l'anniv mais avant le jour (m === 0 && jour < jour)
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--; // On retire 1 an car l'anniversaire n'est pas encore passé
+        }
+
+        if (age<15) {
+            inscription_date_error_old.classList.remove('hidden');
+            return 1;
+        }
+        else {
+            inscription_date_error_old.classList.add('hidden'); 
+            return 0;   
+        }
+        
+    }
+}
+
 
 
 
@@ -65,6 +143,10 @@ inscription.addEventListener("submit", function(event) {
     nb_errors = check_name();
 
     nb_errors = check_surname();
+
+    nb_errors = check_email();
+
+    nb_errors = check_date();
 
     /*console.log('chck id fait');
     nb_errors += check_name();
