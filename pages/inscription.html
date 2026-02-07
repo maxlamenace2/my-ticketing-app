@@ -59,17 +59,24 @@
 
                 <div class="form-group">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="password" placeholder="••••••••">
+                    <input id="InscriptionMdp1" type="password" id="password" name="password" placeholder="••••••••">
+                    <div id="inscription-mdp-error-void" class="error-text hidden">Le mot de passe est obligatoire</div>
+                    <div id="inscription-mdp-error-caractere" class="error-text hidden">Le mot de passe doit contenir au moins 10 caractères</div>
+                    
                 </div>
 
                 <div class="form-group">
                     <label for="password-confirm">Confirmer le mot de passe</label>
-                    <input type="password" id="password-confirm" name="password_confirm" placeholder="••••••••">
+                    <input id="InscriptionMdp2" type="password" id="password-confirm" name="password_confirm" placeholder="••••••••">
+                    <div id="inscription-mdp-error-void2" class="error-text hidden">Le mot de confirmation passe est obligatoire</div>
+                    <div id="inscription-mdp-error-caractere2" class="error-text hidden">Le mot de passe doit contenir au moins 10 caractères</div>
+                    <div id="inscription-mdp-error-same" class="error-text hidden">Le mot de passe doit être le même que celui au dessus</div>
                 </div>
 
                 <div class="form-check">
-                    <input type="checkbox" id="terms" name="terms" required>
+                    <input id="IncriptionCheckBox"type="checkbox" id="terms" name="terms">
                     <label for="terms">J'accepte les <a href="#">Conditions Générales d'Utilisation</a></label>
+                    <div id="inscription-checkbox-error-void" class="error-text hidden">Pour crer un compte il faut accepter les Conditions Générales d'Utilisation</div>
                 </div>
 
                 <button type="submit" class="btn-primary full-width">S'inscrire</button>
@@ -79,6 +86,9 @@
             <div class="auth-footer">
                 <p>Retourner à la page de connexion ?<a href="../index.html" class="link-login"> Se connecter </a></p>
             </div>
+        </div>
+        <div id="success" class="success hidden">
+            <h4>Account created</h4>
         </div>
 
     </main>

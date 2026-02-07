@@ -124,6 +124,80 @@ function check_date() {
     }
 }
 
+function check_mdp() {
+
+    const mdp1 = document.querySelector('#InscriptionMdp1');
+    const mdp2 = document.querySelector('#InscriptionMdp2');
+    const inscription_mdp_error_void = document.querySelector('#inscription-mdp-error-void');
+    const inscription_mdp_error_caractere = document.querySelector('#inscription-mdp-error-caractere');
+    const inscription_mdp_error_void2 = document.querySelector('#inscription-mdp-error-void2');
+    const inscription_mdp_error_caractere2 = document.querySelector('#inscription-mdp-error-caractere2');
+    const inscription_mdp_error_same = document.querySelector('#inscription-mdp-error-same');
+    let res = 0;
+    if(mdp1.value == "") {
+        inscription_mdp_error_void.classList.remove('hidden');
+        res = 1;
+    } else {
+        inscription_mdp_error_void.classList.add('hidden');
+        
+        if (mdp1.value.length < 10) {
+            inscription_mdp_error_caractere.classList.remove('hidden');
+            res = 1;
+        }
+        else {
+            inscription_mdp_error_caractere.classList.add('hidden');
+            res = 0;
+        }
+    }
+
+    if(mdp2.value == "") {
+        inscription_mdp_error_void2.classList.remove('hidden');
+        res = 1;
+    } else {
+        inscription_mdp_error_void2.classList.add('hidden');
+        
+        if (mdp2.value.length < 10) {
+            inscription_mdp_error_caractere2.classList.remove('hidden');
+            res = 1;
+        }
+        else {
+            inscription_mdp_error_caractere2.classList.add('hidden');
+            res = 0;
+        }
+    }
+
+    if (!(mdp1.value == mdp2.value)) {
+        inscription_mdp_error_same.classList.remove('hidden');
+        res = 1;
+    } else {
+        inscription_mdp_error_same.classList.add('hidden');
+        res = 0;
+    }
+
+
+    if (res == 0) {
+        return 0;
+    } 
+    else {
+        return 1;
+    }
+}
+
+function check_box() {
+
+    const checkbox = document.querySelector('#IncriptionCheckBox');
+    
+    const inscription_checkbox_error_void = document.querySelector('#inscription-checkbox-error-void');
+    if(!checkbox.checked) {
+        inscription_checkbox_error_void.classList.remove('hidden');
+        return 1;
+    } else {
+        inscription_checkbox_error_void.classList.add('hidden');
+        return 0;
+    }
+}
+
+
 
 
 
@@ -148,24 +222,23 @@ inscription.addEventListener("submit", function(event) {
 
     nb_errors = check_date();
 
-    /*console.log('chck id fait');
-    nb_errors += check_name();
+    nb_errors = check_mdp();
 
-    nb_errors += check_detail();
-
-    nb_errors += check_collaborators();
-
+    nb_errors = check_box();
+   
 
     
-    console.log("nb_errors : ", nb_errors);
 
-    
     if(nb_errors == 0) {
         // Je vais ajouter la ligne dans mon tableau
-        const a = document.querySelector('#projectId');
-        const b = document.querySelector('#projectName');
-        const c = document.querySelector('#projectDetail');
-        const d = document.querySelector('#projectCollaborators');
+        const a = document.querySelector('#InscriptionName');
+        const b = document.querySelector('#InscriptionSurname');
+        const c = document.querySelector('#InscriptionEmail');
+        const d = document.querySelector('#InscriptionDate');
+        const e = document.querySelector('#InscriptionMdp1');
+        const f = document.querySelector('#InscriptionMdp2');
+        const g = document.querySelector('#IncriptionCheckBox');
+        
 
     
         // Je vide le formulaire
@@ -173,6 +246,9 @@ inscription.addEventListener("submit", function(event) {
         b.value = "";
         c.value = "";
         d.value = "";
+        e.value = "";
+        f.value = "";
+        g.checked = false;
 
         // J'affiche le "toast"
         const toast = document.querySelector("#success");
@@ -183,5 +259,5 @@ inscription.addEventListener("submit", function(event) {
             toast.classList.add('hidden');
             console.log("fichier crer hidden");
         }, 5000);
-    }*/
+    }
 });
