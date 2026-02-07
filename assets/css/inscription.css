@@ -1,0 +1,212 @@
+/* --- VARIABLES --- */
+:root {
+    --primary-blue: #253d93;
+    --accent-blue: #3498db;
+    --light-bg: #F4F7FE;
+    --white: #ffffff;
+    --text-dark: #1B2559;
+    --text-grey: #8F9BBA;
+    --border-color: #E0E5F2;
+}
+
+/* --- PAGE LAYOUT --- */
+.auth-page {
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-header {
+    padding: 20px;
+    text-align: center; /* Centre le logo en haut */
+}
+
+.brand-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* --- CONTENEUR CENTRÉ --- */
+.auth-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centre verticalement */
+    padding: 20px;
+    margin-bottom: 40px; /* Marge pour le bas sur mobile */
+}
+
+/* --- CARTE D'INSCRIPTION --- */
+.auth-card {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 500px; /* Largeur max pour ne pas être trop large sur PC */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* --- TEXTE D'EN-TÊTE --- */
+.auth-header-text {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.auth-header-text h1 {
+    color: var(--text-dark);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.auth-header-text p {
+    color: var(--text-grey);
+    font-size: 14px;
+}
+
+/* --- FORMULAIRE --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Pour mettre Nom et Prénom côte à côte */
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+.form-row .form-group {
+    flex: 1; /* Chaque input prend 50% de la largeur */
+}
+
+label {
+    display: block;
+    color: var(--text-dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+input:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+/* Style spécifique pour l'input date (pour qu'il soit joli) */
+input[type="date"] {
+    color: var(--text-grey);
+}
+input[type="date"]:valid {
+    color: var(--text-dark);
+}
+
+/* --- CHECKBOX (CGU) --- */
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
+
+.form-check input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.form-check a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+.form-check a:hover {
+    text-decoration: underline;
+}
+
+/* --- BOUTON --- */
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-blue);
+}
+
+.btn-primary:active {
+    transform: scale(0.98);
+}
+
+/* --- FOOTER (Lien Login) --- */
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--text-grey);
+}
+
+.link-login {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*ERREUR*/
+.error-text {
+    margin-top: 10px;
+    background-color: #cb9297;   /* rouge clair pastel */
+    color: #721C24;              /* rouge foncé lisible */
+    border: 1px solid #F5C6CB;   /* bordure douce */
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.link-login:hover {
+    text-decoration: underline;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 500px) {
+    .auth-card {
+        padding: 25px;
+    }
+
+    /* Sur mobile, on empile Nom et Prénom verticalement */
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

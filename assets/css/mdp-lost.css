@@ -90,6 +90,7 @@ body {
     width: 100%;
     padding: 16px;
     margin-top: 30px;
+    margin-bottom: 15px;
     background-color: #2D5BFF; 
     border: none;
     border-radius: 12px;
@@ -108,4 +109,17 @@ body {
 
 .login-btn:active {
     transform: translateY(0);
+}
+
+.returnConnection {
+    color: #8F9BBA; 
+    text-decoration: none; /* Pas de soulignement moche */
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.returnConnection:hover {
+    color: #3498db; 
+    text-decoration: underline; 
 }
